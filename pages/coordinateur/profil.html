@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil | StageConnect — Coordinateur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-coordinateur">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-people-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Coordinateur Stages</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <div class="sidebar-section-title">Offres & Conventions</div>
+                <a href="gestion-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Gestion des offres</a>
+                <a href="conventions.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Conventions <span
+                        class="link-badge">8</span></a>
+                <div class="sidebar-section-title">Suivi</div>
+                <a href="suivi-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Suivi des stagiaires</a>
+                <a href="gestion-entreprises.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Entreprises partenaires</a>
+                <div class="sidebar-section-title">Évaluations</div>
+                <a href="evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluations</a>
+                <div class="sidebar-section-title">Rapports</div>
+                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-graph-up"></i></span>Rapports & Statistiques</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">6</span></a>
+                <a href="profil.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">SC</div>
+                    <div class="user-info">
+                        <div class="user-name">Sophie Chabert</div>
+                        <div class="user-role">Coordinatrice Stages</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">SC</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Mon profil</h1>
+                    <p class="page-subtitle">Informations personnelles et paramètres</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card text-center p-4">
+                            <div class="user-avatar mx-auto mb-3" style="width:72px;height:72px;font-size:1.8rem;">SC
+                            </div>
+                            <h5 style="font-weight:700;">Sophie Chabert</h5>
+                            <p style="font-size:0.85rem;color:#6c757d;">Coordinatrice Stages</p>
+                            <span class="status-badge status-valide">Compte actif</span>
+                            <hr>
+                            <div class="d-flex flex-column gap-2 text-start" style="font-size:0.85rem;">
+                                <div><i class="bi bi-envelope text-role me-2"></i>s.chabert@univ.fr</div>
+                                <div><i class="bi bi-telephone text-role me-2"></i>+33 1 69 15 40 00</div>
+                                <div><i class="bi bi-building text-role me-2"></i>Service des Stages, Bât. 100</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-pencil me-2 text-role"></i>Modifier mes informations</span></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Prénom</label><input
+                                                type="text" class="form-control" value="Sophie"></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Nom</label><input
+                                                type="text" class="form-control" value="Chabert"></div>
+                                        <div class="col-12"><label class="form-label fw-semibold">Email</label><input
+                                                type="email" class="form-control" value="s.chabert@univ.fr"></div>
+                                        <div class="col-md-6"><label
+                                                class="form-label fw-semibold">Téléphone</label><input type="tel"
+                                                class="form-control" value="+33 1 69 15 40 00"></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Bureau</label><input
+                                                type="text" class="form-control" value="Bât. 100, Bureau 005"></div>
+                                    </div>
+                                    <hr>
+                                    <h6 class="fw-bold mb-3">Changer le mot de passe</h6>
+                                    <div class="row g-3">
+                                        <div class="col-12"><label class="form-label fw-semibold">Mot de passe
+                                                actuel</label><input type="password" class="form-control"
+                                                placeholder="••••••••"></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Nouveau mot de
+                                                passe</label><input type="password" class="form-control"
+                                                placeholder="••••••••"></div>
+                                        <div class="col-md-6"><label
+                                                class="form-label fw-semibold">Confirmer</label><input type="password"
+                                                class="form-control" placeholder="••••••••"></div>
+                                    </div>
+                                    <div class="mt-4"><button type="submit" class="btn-role"><i
+                                                class="bi bi-save me-2"></i>Enregistrer</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Coordinateur Stages</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

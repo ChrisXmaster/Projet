@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord — Étudiant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="role-etudiant">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="offres-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Offres de stage</a>
+                <a href="mes-candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-send"></i></span>Mes candidatures <span class="link-badge">3</span></a>
+                <a href="mon-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Mon stage</a>
+                <div class="sidebar-section-title">Suivi</div>
+                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-text"></i></span>Journal de stage</a>
+                <a href="documents.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-folder2"></i></span>Documents</a>
+                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Mes évaluations</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">5</span></a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Ahmed Diallo</div>
+                        <div class="user-role">Étudiant M2 Info</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-content" id="mainContent">
+            <!-- Navbar -->
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="search" class="form-control" placeholder="Rechercher une offre...">
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <button class="nav-icon-btn"><i class="bi bi-bell"></i><span class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <a href="profil.html" class="d-flex align-items-center gap-2 text-decoration-none"
+                        style="color:inherit;">
+                        <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">AD</div>
+                        <span style="font-size:0.85rem;font-weight:600;">Ahmed Diallo</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Bonjour, Ahmed 👋</h1>
+                    <p class="page-subtitle">Voici un résumé de vos activités de stage</p>
+                </div>
+
+                <!-- Stat Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-send-fill"></i></div>
+                            <div>
+                                <div class="stat-value">8</div>
+                                <div class="stat-label">Candidatures envoyées</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> +2 ce mois</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-hourglass-split"></i></div>
+                            <div>
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">En attente de réponse</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <div>
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Candidatures retenues</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> 25% taux succès</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-calendar-check"></i></div>
+                            <div>
+                                <div class="stat-value">42</div>
+                                <div class="stat-label">Jours de stage restants</div>
+                                <div class="stat-trend"><i class="bi bi-calendar"></i> Fin: 15 Juin 2026</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage actuel + Timeline -->
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-building me-2 text-role"></i>Stage en
+                                    cours</span>
+                                <a href="mon-stage.html" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-start gap-3 mb-4">
+                                    <div
+                                        style="width:52px;height:52px;background:rgba(13,110,253,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">
+                                        🏢</div>
+                                    <div>
+                                        <h5 style="font-weight:700;font-size:1rem;margin-bottom:4px;">Développeur
+                                            Full-Stack</h5>
+                                        <p style="color:#6c757d;font-size:0.85rem;margin:0;">TechParis SAS · 75009 Paris
+                                        </p>
+                                        <p style="color:#6c757d;font-size:0.82rem;margin-top:4px;"><i
+                                                class="bi bi-calendar2 me-1"></i>1 Mars – 31 Juillet 2026 <span
+                                                class="status-badge status-en-cours ms-2">En cours</span></p>
+                                    </div>
+                                </div>
+                                <!-- Progress -->
+                                <div class="mb-2 d-flex justify-content-between"
+                                    style="font-size:0.82rem;font-weight:600;">
+                                    <span>Progression du stage</span>
+                                    <span class="text-role">42%</span>
+                                </div>
+                                <div class="progress-custom">
+                                    <div class="progress-bar-custom" style="width:42%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between mt-1"
+                                    style="font-size:0.75rem;color:#6c757d;">
+                                    <span>1 Mars 2026</span><span>31 Juillet 2026</span>
+                                </div>
+                                <!-- Status steps -->
+                                <div class="mt-4">
+                                    <div style="font-size:0.82rem;font-weight:600;margin-bottom:12px;">Flux de
+                                        validation</div>
+                                    <div class="stepper">
+                                        <div class="step-item">
+                                            <div style="text-align:center;">
+                                                <div class="step-bubble done"><i class="bi bi-check"></i></div>
+                                                <div class="step-label">Enseignant</div>
+                                            </div>
+                                            <div class="step-line done"></div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div style="text-align:center;">
+                                                <div class="step-bubble done"><i class="bi bi-check"></i></div>
+                                                <div class="step-label">Chef Dépt.</div>
+                                            </div>
+                                            <div class="step-line done"></div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div style="text-align:center;">
+                                                <div class="step-bubble done"><i class="bi bi-check"></i></div>
+                                                <div class="step-label">Coordinateur</div>
+                                            </div>
+                                            <div class="step-line done"></div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div style="text-align:center;">
+                                                <div class="step-bubble active"><i class="bi bi-building"></i></div>
+                                                <div class="step-label">Entreprise</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-pie-chart me-2 text-role"></i>Mes
+                                    candidatures</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="height:180px;"><canvas id="chartDoughnut"></canvas>
+                                </div>
+                                <div class="d-flex flex-column gap-2 mt-3">
+                                    <div class="d-flex justify-content-between" style="font-size:0.8rem;"><span>✅
+                                            Retenues</span><strong class="text-success">2</strong></div>
+                                    <div class="d-flex justify-content-between" style="font-size:0.8rem;"><span>⏳ En
+                                            attente</span><strong style="color:#b45309;">3</strong></div>
+                                    <div class="d-flex justify-content-between" style="font-size:0.8rem;"><span>❌
+                                            Refusées</span><strong class="text-danger">3</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offres récentes + Actions rapides -->
+                <div class="row g-3">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-briefcase me-2 text-role"></i>Offres
+                                    recommandées</span>
+                                <a href="offres-stage.html" class="btn btn-sm btn-outline-primary">Toutes les offres</a>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-wrapper">
+                                    <table class="app-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Poste</th>
+                                                <th>Entreprise</th>
+                                                <th>Ville</th>
+                                                <th>Durée</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Développeur React</strong></td>
+                                                <td>DataViz Corp</td>
+                                                <td><i class="bi bi-geo-alt text-role"></i> Lyon</td>
+                                                <td>6 mois</td>
+                                                <td><a href="postuler.html" class="btn btn-sm btn-primary">Postuler</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Data Analyst</strong></td>
+                                                <td>AI Solutions</td>
+                                                <td><i class="bi bi-geo-alt text-role"></i> Paris</td>
+                                                <td>5 mois</td>
+                                                <td><a href="postuler.html" class="btn btn-sm btn-primary">Postuler</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>DevOps Engineer</strong></td>
+                                                <td>CloudStack</td>
+                                                <td><i class="bi bi-geo-alt text-role"></i> Bordeaux</td>
+                                                <td>4 mois</td>
+                                                <td><a href="postuler.html" class="btn btn-sm btn-primary">Postuler</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-lightning me-2 text-role"></i>Actions rapides</span></div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <a href="postuler.html" class="btn-role"><i class="bi bi-send"></i> Nouvelle
+                                        candidature</a>
+                                    <a href="documents.html" class="btn-outline-role"><i class="bi bi-upload"></i>
+                                        Déposer un document</a>
+                                    <a href="journal-stage.html" class="btn-outline-role"><i class="bi bi-pencil"></i>
+                                        Écrire journal</a>
+                                    <a href="offres-stage.html" class="btn-outline-role"><i class="bi bi-search"></i>
+                                        Chercher stage</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="app-footer">
+                <span>StageConnect &copy; 2026</span>
+                <span>Espace Étudiant</span>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/charts.js"></script>
+</body>
+
+</html>

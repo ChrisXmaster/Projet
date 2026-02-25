@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprises partenaires | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-coordinateur">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-people-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Coordinateur Stages</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <div class="sidebar-section-title">Offres & Conventions</div>
+                <a href="gestion-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Gestion des offres</a>
+                <a href="conventions.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Conventions <span
+                        class="link-badge">8</span></a>
+                <div class="sidebar-section-title">Suivi</div>
+                <a href="suivi-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Suivi des stagiaires</a>
+                <a href="gestion-entreprises.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Entreprises partenaires</a>
+                <div class="sidebar-section-title">Évaluations</div>
+                <a href="evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluations</a>
+                <div class="sidebar-section-title">Rapports</div>
+                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-graph-up"></i></span>Rapports & Statistiques</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">6</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">SC</div>
+                    <div class="user-info">
+                        <div class="user-name">Sophie Chabert</div>
+                        <div class="user-role">Coordinatrice Stages</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher une entreprise..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">SC</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Entreprises partenaires</h1>
+                        <p class="page-subtitle">54 entreprises au total — 42 actives ce semestre</p>
+                    </div>
+                    <button class="btn-role"><i class="bi bi-plus-circle me-2"></i>Ajouter une entreprise</button>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(32,178,170,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--role-color);flex-shrink:0;">
+                                        <i class="bi bi-building"></i></div>
+                                    <div>
+                                        <h6 style="font-weight:700;margin:0;">TechParis SAS</h6><small
+                                            class="text-muted">IT & Développement</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-1 mb-3" style="font-size:0.82rem;">
+                                    <div><i class="bi bi-geo-alt text-role me-2"></i>75009 Paris</div>
+                                    <div><i class="bi bi-people text-role me-2"></i>5 stagiaires accueillis</div>
+                                    <div><i class="bi bi-star text-role me-2"></i>Note moyenne : 4.8/5</div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <span class="status-badge status-valide">Partenaire actif</span>
+                                    <button class="btn btn-sm btn-outline-secondary ms-auto">Voir le profil</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(32,178,170,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--role-color);flex-shrink:0;">
+                                        <i class="bi bi-building"></i></div>
+                                    <div>
+                                        <h6 style="font-weight:700;margin:0;">AI Solutions</h6><small
+                                            class="text-muted">Intelligence Artificielle</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-1 mb-3" style="font-size:0.82rem;">
+                                    <div><i class="bi bi-geo-alt text-role me-2"></i>92400 Courbevoie</div>
+                                    <div><i class="bi bi-people text-role me-2"></i>4 stagiaires accueillis</div>
+                                    <div><i class="bi bi-star text-role me-2"></i>Note moyenne : 4.6/5</div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <span class="status-badge status-valide">Partenaire actif</span>
+                                    <button class="btn btn-sm btn-outline-secondary ms-auto">Voir le profil</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(32,178,170,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--role-color);flex-shrink:0;">
+                                        <i class="bi bi-building"></i></div>
+                                    <div>
+                                        <h6 style="font-weight:700;margin:0;">SecureNet</h6><small
+                                            class="text-muted">Cybersécurité</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-1 mb-3" style="font-size:0.82rem;">
+                                    <div><i class="bi bi-geo-alt text-role me-2"></i>75008 Paris</div>
+                                    <div><i class="bi bi-people text-role me-2"></i>3 stagiaires accueillis</div>
+                                    <div><i class="bi bi-star text-role me-2"></i>Note moyenne : 4.5/5</div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <span class="status-badge status-valide">Partenaire actif</span>
+                                    <button class="btn btn-sm btn-outline-secondary ms-auto">Voir le profil</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Coordinateur Stages</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

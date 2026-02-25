@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres de stage — Étudiant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-etudiant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="offres-stage.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Offres de stage</a>
+                <a href="mes-candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-send"></i></span>Mes candidatures <span class="link-badge">3</span></a>
+                <a href="mon-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Mon stage</a>
+                <div class="sidebar-section-title">Suivi</div>
+                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-text"></i></span>Journal de stage</a>
+                <a href="documents.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-folder2"></i></span>Documents</a>
+                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Mes évaluations</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">5</span></a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Ahmed Diallo</div>
+                        <div class="user-role">Étudiant M2 Info</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher un poste, une entreprise..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">AD</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header d-flex justify-content-between align-items-start">
+                    <div>
+                        <h1 class="page-title">Offres de stage</h1>
+                        <p class="page-subtitle">238 offres disponibles correspondent à votre profil</p>
+                    </div>
+                </div>
+
+                <!-- Filtres -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row g-2 align-items-end">
+                            <div class="col-md-3"><label class="form-label fw-600"
+                                    style="font-size:0.8rem;">Domaine</label><select class="form-select form-select-sm">
+                                    <option>Tous les domaines</option>
+                                    <option>Développement Web</option>
+                                    <option>Data Science</option>
+                                    <option>IA / Machine Learning</option>
+                                    <option>DevOps</option>
+                                </select></div>
+                            <div class="col-md-2"><label class="form-label fw-600"
+                                    style="font-size:0.8rem;">Durée</label><select class="form-select form-select-sm">
+                                    <option>Toutes</option>
+                                    <option>2 mois</option>
+                                    <option>4 mois</option>
+                                    <option>6 mois</option>
+                                </select></div>
+                            <div class="col-md-2"><label class="form-label fw-600"
+                                    style="font-size:0.8rem;">Ville</label><select class="form-select form-select-sm">
+                                    <option>Toutes</option>
+                                    <option>Paris</option>
+                                    <option>Lyon</option>
+                                    <option>Bordeaux</option>
+                                </select></div>
+                            <div class="col-md-2"><label class="form-label fw-600"
+                                    style="font-size:0.8rem;">Gratification</label><select
+                                    class="form-select form-select-sm">
+                                    <option>Toutes</option>
+                                    <option>> 500€</option>
+                                    <option>> 800€</option>
+                                    <option>> 1000€</option>
+                                </select></div>
+                            <div class="col-md-3"><button class="btn btn-primary w-100" style="font-size:0.875rem;"><i
+                                        class="bi bi-search me-1"></i> Filtrer les offres</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offres grid -->
+                <div class="row g-3">
+                    <!-- Offre 1 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100" style="transition:all 0.3s;"
+                            onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                            onmouseleave="this.style.transform='';this.style.boxShadow=''">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(13,110,253,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        💻</div>
+                                    <span class="status-badge status-publie">Publié</span>
+                                </div>
+                                <h5 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">Développeur Full-Stack
+                                    React/Node</h5>
+                                <p style="color:#6c757d;font-size:0.82rem;margin-bottom:12px;">TechParis SAS</p>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-geo-alt text-role"></i> Paris 9e</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-clock"></i> 6 mois</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-currency-euro"></i> 1 100€/mois</span>
+                                </div>
+                                <p style="font-size:0.8rem;color:#495057;line-height:1.5;margin-bottom:16px;">
+                                    Développement d'une application SaaS B2B. Stack : React 18, Node.js, PostgreSQL,
+                                    Docker.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="offre-detail.html" class="btn btn-sm btn-outline-primary flex-fill">Voir
+                                        détails</a>
+                                    <a href="postuler.html" class="btn btn-sm btn-primary flex-fill">Postuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offre 2 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100" style="transition:all 0.3s;"
+                            onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                            onmouseleave="this.style.transform='';this.style.boxShadow=''">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(25,135,84,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        📊</div>
+                                    <span class="status-badge status-publie">Publié</span>
+                                </div>
+                                <h5 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">Data Analyst – Python &
+                                    BI</h5>
+                                <p style="color:#6c757d;font-size:0.82rem;margin-bottom:12px;">AI Solutions Group</p>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-geo-alt" style="color:#198754"></i> Lyon</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-clock"></i> 5 mois</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-currency-euro"></i> 850€/mois</span>
+                                </div>
+                                <p style="font-size:0.8rem;color:#495057;line-height:1.5;margin-bottom:16px;">Analyse de
+                                    données business, création de dashboards Power BI, scripts Python de data
+                                    processing.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="offre-detail.html" class="btn btn-sm btn-outline-primary flex-fill">Voir
+                                        détails</a>
+                                    <a href="postuler.html" class="btn btn-sm btn-primary flex-fill">Postuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offre 3 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100" style="transition:all 0.3s;"
+                            onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                            onmouseleave="this.style.transform='';this.style.boxShadow=''">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(253,126,20,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        ☁️</div>
+                                    <span class="status-badge status-publie">Publié</span>
+                                </div>
+                                <h5 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">DevOps / Cloud Engineer
+                                </h5>
+                                <p style="color:#6c757d;font-size:0.82rem;margin-bottom:12px;">CloudStack EUREKA</p>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-geo-alt" style="color:#fd7e14"></i> Bordeaux</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-clock"></i> 4 mois</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-currency-euro"></i> 950€/mois</span>
+                                </div>
+                                <p style="font-size:0.8rem;color:#495057;line-height:1.5;margin-bottom:16px;">
+                                    Administration cloud AWS/Azure, CI/CD, monitoring Kubernetes et automatisation
+                                    d'infra.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="offre-detail.html" class="btn btn-sm btn-outline-primary flex-fill">Voir
+                                        détails</a>
+                                    <a href="postuler.html" class="btn btn-sm btn-primary flex-fill">Postuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offre 4 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100" style="transition:all 0.3s;"
+                            onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                            onmouseleave="this.style.transform='';this.style.boxShadow=''">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(111,66,193,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        🤖</div>
+                                    <span class="status-badge status-publie">Publié</span>
+                                </div>
+                                <h5 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">ML Engineer – NLP</h5>
+                                <p style="color:#6c757d;font-size:0.82rem;margin-bottom:12px;">DeepMind France</p>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-geo-alt" style="color:#6f42c1"></i> Saclay</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-clock"></i> 6 mois</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-currency-euro"></i> 1 200€/mois</span>
+                                </div>
+                                <p style="font-size:0.8rem;color:#495057;line-height:1.5;margin-bottom:16px;">
+                                    Développement de modèles NLP (Transformers, BERT) pour l'analyse de sentiments.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="offre-detail.html" class="btn btn-sm btn-outline-primary flex-fill">Voir
+                                        détails</a>
+                                    <a href="postuler.html" class="btn btn-sm btn-primary flex-fill">Postuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offre 5 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100" style="transition:all 0.3s;"
+                            onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                            onmouseleave="this.style.transform='';this.style.boxShadow=''">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(220,53,69,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        🎨</div>
+                                    <span class="status-badge status-publie">Publié</span>
+                                </div>
+                                <h5 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">UX/UI Designer</h5>
+                                <p style="color:#6c757d;font-size:0.82rem;margin-bottom:12px;">DesignHub Studio</p>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-geo-alt" style="color:#dc3545"></i> Marseille</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-clock"></i> 3 mois</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-currency-euro"></i> 750€/mois</span>
+                                </div>
+                                <p style="font-size:0.8rem;color:#495057;line-height:1.5;margin-bottom:16px;">Conception
+                                    d'interfaces Figma, test utilisateurs, accessibilité WCAG sur projets clients.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="offre-detail.html" class="btn btn-sm btn-outline-primary flex-fill">Voir
+                                        détails</a>
+                                    <a href="postuler.html" class="btn btn-sm btn-primary flex-fill">Postuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Offre 6 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100" style="transition:all 0.3s;"
+                            onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                            onmouseleave="this.style.transform='';this.style.boxShadow=''">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div
+                                        style="width:48px;height:48px;background:rgba(13,110,253,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        🔐</div>
+                                    <span class="status-badge status-publie">Publié</span>
+                                </div>
+                                <h5 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">Cybersécurité &
+                                    Pentesting</h5>
+                                <p style="color:#6c757d;font-size:0.82rem;margin-bottom:12px;">SecureNet France</p>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-geo-alt text-role"></i> Paris 14e</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-clock"></i> 6 mois</span>
+                                    <span class="badge bg-light text-dark" style="font-size:0.73rem;"><i
+                                            class="bi bi-currency-euro"></i> 1 050€/mois</span>
+                                </div>
+                                <p style="font-size:0.8rem;color:#495057;line-height:1.5;margin-bottom:16px;">Audits de
+                                    sécurité, tests d'intrusion, veille vulnérabilités CVE.</p>
+                                <div class="d-flex gap-2">
+                                    <a href="offre-detail.html" class="btn btn-sm btn-outline-primary flex-fill">Voir
+                                        détails</a>
+                                    <a href="postuler.html" class="btn btn-sm btn-primary flex-fill">Postuler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

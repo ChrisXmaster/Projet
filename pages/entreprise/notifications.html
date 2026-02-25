@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | StageConnect — Entreprise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-entreprise">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Entreprise</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="nouvelle-offre.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-plus-circle"></i></span>Publier une offre</a>
+                <a href="mes-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Mes offres</a>
+                <div class="sidebar-section-title">Candidatures</div>
+                <a href="candidatures-recues.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-inbox"></i></span>Candidatures reçues</a>
+                <a href="mes-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes stagiaires</a>
+                <a href="evaluer-stagiaire.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluer un stagiaire</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Profil entreprise</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">TP</div>
+                    <div class="user-info">
+                        <div class="user-name">TechParis SAS</div>
+                        <div class="user-role">Entreprise partenaire</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Notifications</h1>
+                        <p class="page-subtitle">3 notifications non lues</p>
+                    </div>
+                    <button class="btn btn-outline-secondary btn-sm">Tout marquer comme lu</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-start gap-3 p-3"
+                                style="border-bottom:1px solid var(--border-color);background:rgba(253,126,20,0.04);">
+                                <div
+                                    style="width:40px;height:40px;background:rgba(253,126,20,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--role-color);">
+                                    <i class="bi bi-person-plus"></i>
+                                </div>
+                                <div style="flex:1;">
+                                    <div style="font-weight:600;font-size:0.88rem;">Nouvelle candidature reçue</div>
+                                    <div style="font-size:0.82rem;color:#6c757d;">Ahmed Diallo a postulé pour le poste
+                                        de <strong>Développeur Full-Stack</strong>.</div>
+                                    <div style="font-size:0.75rem;color:#adb5bd;margin-top:4px;">Il y a 2 heures</div>
+                                </div>
+                                <span class="badge-dot"
+                                    style="width:10px;height:10px;background:var(--role-color);border-radius:50%;flex-shrink:0;margin-top:6px;"></span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3"
+                                style="border-bottom:1px solid var(--border-color);background:rgba(253,126,20,0.04);">
+                                <div
+                                    style="width:40px;height:40px;background:rgba(25,135,84,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#198754;">
+                                    <i class="bi bi-check-circle"></i>
+                                </div>
+                                <div style="flex:1;">
+                                    <div style="font-weight:600;font-size:0.88rem;">Offre validée par le coordinateur
+                                    </div>
+                                    <div style="font-size:0.82rem;color:#6c757d;">Votre offre <strong>DevOps
+                                            Engineer</strong> a été validée et est maintenant visible par les étudiants.
+                                    </div>
+                                    <div style="font-size:0.75rem;color:#adb5bd;margin-top:4px;">Hier à 14:30</div>
+                                </div>
+                                <span class="badge-dot"
+                                    style="width:10px;height:10px;background:var(--role-color);border-radius:50%;flex-shrink:0;margin-top:6px;"></span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3"
+                                style="border-bottom:1px solid var(--border-color);background:rgba(253,126,20,0.04);">
+                                <div
+                                    style="width:40px;height:40px;background:rgba(255,193,7,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#b45309;">
+                                    <i class="bi bi-clock"></i>
+                                </div>
+                                <div style="flex:1;">
+                                    <div style="font-weight:600;font-size:0.88rem;">Offre bientôt expirée</div>
+                                    <div style="font-size:0.82rem;color:#6c757d;">Votre offre <strong>Développeur
+                                            Full-Stack</strong> expire dans 3 jours. Pensez à la renouveler.</div>
+                                    <div style="font-size:0.75rem;color:#adb5bd;margin-top:4px;">Il y a 2 jours</div>
+                                </div>
+                                <span class="badge-dot"
+                                    style="width:10px;height:10px;background:var(--role-color);border-radius:50%;flex-shrink:0;margin-top:6px;"></span>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3"
+                                style="border-bottom:1px solid var(--border-color);">
+                                <div
+                                    style="width:40px;height:40px;background:rgba(108,117,125,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#6c757d;">
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <div style="flex:1;">
+                                    <div style="font-weight:600;font-size:0.88rem;">Rappel : évaluation à soumettre
+                                    </div>
+                                    <div style="font-size:0.82rem;color:#6c757d;">Il vous reste 15 jours pour soumettre
+                                        l'évaluation de <strong>Nicolas Dupont</strong>.</div>
+                                    <div style="font-size:0.75rem;color:#adb5bd;margin-top:4px;">Il y a 3 jours</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Entreprise</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

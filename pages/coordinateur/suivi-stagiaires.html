@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi des stagiaires | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-coordinateur">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-people-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Coordinateur Stages</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <div class="sidebar-section-title">Offres & Conventions</div>
+                <a href="gestion-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Gestion des offres</a>
+                <a href="conventions.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Conventions <span
+                        class="link-badge">8</span></a>
+                <div class="sidebar-section-title">Suivi</div>
+                <a href="suivi-stagiaires.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Suivi des stagiaires</a>
+                <a href="gestion-entreprises.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Entreprises partenaires</a>
+                <div class="sidebar-section-title">Évaluations</div>
+                <a href="evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluations</a>
+                <div class="sidebar-section-title">Rapports</div>
+                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-graph-up"></i></span>Rapports & Statistiques</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">6</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">SC</div>
+                    <div class="user-info">
+                        <div class="user-name">Sophie Chabert</div>
+                        <div class="user-role">Coordinatrice Stages</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher un stagiaire..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">SC</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Suivi des stagiaires</h1>
+                        <p class="page-subtitle">87 étudiants actuellement en stage</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <select class="form-select" style="width:auto;">
+                            <option>Tous les départements</option>
+                            <option>Informatique</option>
+                            <option>Data Science</option>
+                            <option>Cybersécurité</option>
+                        </select>
+                        <button class="btn btn-outline-secondary"><i class="bi bi-download me-2"></i>Export</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-wrapper">
+                            <table class="app-table">
+                                <thead>
+                                    <tr>
+                                        <th>Étudiant</th>
+                                        <th>Formation</th>
+                                        <th>Entreprise</th>
+                                        <th>Enseignant référent</th>
+                                        <th>Progression</th>
+                                        <th>Statut</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Ahmed Diallo</strong></td>
+                                        <td>M2 Informatique</td>
+                                        <td>TechParis SAS</td>
+                                        <td>Dr. Moreau</td>
+                                        <td style="width:120px;">
+                                            <div class="progress-custom">
+                                                <div class="progress-bar-custom" style="width:42%"></div>
+                                            </div><small>42%</small>
+                                        </td>
+                                        <td><span class="status-badge status-en-cours">En cours</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Marie Lefèvre</strong></td>
+                                        <td>M2 Data Science</td>
+                                        <td>AI Solutions</td>
+                                        <td>Dr. Bernard</td>
+                                        <td style="width:120px;">
+                                            <div class="progress-custom">
+                                                <div class="progress-bar-custom" style="width:58%"></div>
+                                            </div><small>58%</small>
+                                        </td>
+                                        <td><span class="status-badge status-en-cours">En cours</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nicolas Dupont</strong></td>
+                                        <td>M1 Génie Logiciel</td>
+                                        <td>CloudStack</td>
+                                        <td>Dr. Petit</td>
+                                        <td style="width:120px;">
+                                            <div class="progress-custom">
+                                                <div class="progress-bar-custom" style="width:73%"></div>
+                                            </div><small>73%</small>
+                                        </td>
+                                        <td><span class="status-badge status-en-cours">En cours</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fatima Okon</strong></td>
+                                        <td>M2 Cybersécurité</td>
+                                        <td>SecureNet</td>
+                                        <td>Dr. Laurent</td>
+                                        <td style="width:120px;">
+                                            <div class="progress-custom">
+                                                <div class="progress-bar-custom" style="width:30%"></div>
+                                            </div><small>30%</small>
+                                        </td>
+                                        <td><span class="status-badge status-en-cours">En cours</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Camille Dubois</strong></td>
+                                        <td>M1 Informatique</td>
+                                        <td>DataViz Corp</td>
+                                        <td>Dr. Rousseau</td>
+                                        <td style="width:120px;">
+                                            <div class="progress-custom">
+                                                <div class="progress-bar-custom" style="width:90%"></div>
+                                            </div><small>90%</small>
+                                        </td>
+                                        <td><span class="status-badge status-valide">Terminé</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Coordinateur Stages</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

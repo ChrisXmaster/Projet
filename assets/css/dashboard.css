@@ -1,0 +1,271 @@
+/* =============================================================
+   DASHBOARD — STYLES SUPPLÉMENTAIRES
+   ============================================================= */
+
+/* Quick Actions */
+.quick-action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 12px;
+    border-radius: 12px;
+    background: var(--bg-body);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.quick-action-btn:hover {
+    background: var(--role-color-light);
+    border-color: var(--role-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.quick-action-btn .qa-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--role-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--role-color);
+    transition: all 0.25s;
+}
+
+.quick-action-btn:hover .qa-icon {
+    background: var(--role-color);
+    color: white;
+}
+
+.quick-action-btn .qa-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: inherit;
+}
+
+/* Progress bars */
+.progress-custom {
+    height: 8px;
+    background: var(--bg-body);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-custom {
+    height: 100%;
+    background: var(--role-color);
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* KPI widget */
+.kpi-widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.kpi-widget:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.kpi-widget:first-child {
+    padding-top: 0;
+}
+
+.kpi-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.kpi-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Activity feed */
+.activity-item {
+    display: flex;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.activity-item:first-child {
+    padding-top: 0;
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--role-color-light);
+    color: var(--role-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.activity-text {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.activity-meta {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 3px;
+}
+
+/* Calendar widget mini */
+.mini-calendar {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.mini-calendar-header {
+    background: var(--role-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.mini-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 0.78rem;
+}
+
+.mini-calendar-grid .day-name {
+    padding: 6px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    background: var(--bg-body);
+}
+
+.mini-calendar-grid .day {
+    padding: 6px 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.mini-calendar-grid .day:hover {
+    background: var(--role-color-light);
+    color: var(--role-color);
+}
+
+.mini-calendar-grid .day.today {
+    background: var(--role-color);
+    color: white;
+    font-weight: 700;
+}
+
+.mini-calendar-grid .day.other-month {
+    color: var(--text-secondary);
+    opacity: 0.4;
+}
+
+/* Kanban-style columns */
+.kanban-col {
+    background: var(--bg-body);
+    border-radius: 10px;
+    padding: 14px;
+    min-height: 300px;
+}
+
+.kanban-col-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kanban-item {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.kanban-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state .empty-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+    margin-bottom: 16px;
+}
+
+.empty-state .empty-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.empty-state .empty-text {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+/* Score/Grade display */
+.score-display {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.score-value {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--role-color);
+    line-height: 1;
+}
+
+.score-total {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}

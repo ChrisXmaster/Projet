@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluations — Enseignant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-enseignant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-person-badge-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Enseignant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="mes-etudiants.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes étudiants</a>
+                <a href="candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Candidatures</a>
+                <a href="visites-terrain.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-map"></i></span>Visites terrain</a>
+                <a href="evaluations.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-clipboard-check"></i></span>Évaluations</a>
+                <a href="rapports.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-richtext"></i></span>Rapports</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar" style="background:#198754;">JM</div>
+                    <div class="user-info">
+                        <div class="user-name">Jean Martin</div>
+                        <div class="user-role">Maître de conférences</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i></button></div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Évaluations</h1>
+                    <p class="page-subtitle">5 évaluations académiques à compléter</p>
+                </div>
+                <div class="card">
+                    <div class="card-header"><span class="card-title"><i class="bi bi-pencil-fill me-2"
+                                style="color:#198754;"></i>Formulaire d'évaluation — Ahmed Diallo</span><span
+                            class="status-badge status-en-attente">À compléter</span></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-600" style="font-size:0.82rem;">Rapport de stage <span
+                                            class="text-danger">*</span></label>
+                                    <div class="d-flex align-items-center gap-3"><input type="range"
+                                            class="form-range flex-fill" min="0" max="20" value="16" id="rapportRange"
+                                            oninput="document.getElementById('rapportVal').textContent=this.value+'/20'"><span
+                                            id="rapportVal"
+                                            style="font-weight:700;color:#198754;width:50px;">16/20</span></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-600" style="font-size:0.82rem;">Soutenance orale</label>
+                                    <div class="d-flex align-items-center gap-3"><input type="range"
+                                            class="form-range flex-fill" min="0" max="20" value="15"
+                                            id="soutenanceRange"
+                                            oninput="document.getElementById('soutenanceVal').textContent=this.value+'/20'"><span
+                                            id="soutenanceVal"
+                                            style="font-weight:700;color:#198754;width:50px;">15/20</span></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-600" style="font-size:0.82rem;">Implication et
+                                        rigueur</label>
+                                    <div class="d-flex align-items-center gap-3"><input type="range"
+                                            class="form-range flex-fill" min="0" max="20" value="17"
+                                            id="implicationRange"
+                                            oninput="document.getElementById('implicationVal').textContent=this.value+'/20'"><span
+                                            id="implicationVal"
+                                            style="font-weight:700;color:#198754;width:50px;">17/20</span></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-600" style="font-size:0.82rem;">Journal de bord</label>
+                                    <div class="d-flex align-items-center gap-3"><input type="range"
+                                            class="form-range flex-fill" min="0" max="20" value="14" id="journalRange"
+                                            oninput="document.getElementById('journalVal').textContent=this.value+'/20'"><span
+                                            id="journalVal"
+                                            style="font-weight:700;color:#198754;width:50px;">14/20</span></div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-600" style="font-size:0.82rem;">Commentaire
+                                        global</label>
+                                    <textarea class="form-control form-control-sm"
+                                        rows="3">Étudiant sérieux et très impliqué. Le rapport est bien structuré et la soutenance convaincante. Continue à développer ta capacité d'analyse critique.</textarea>
+                                </div>
+                                <div class="col-12 d-flex gap-2">
+                                    <button type="submit" class="btn-role"><i class="bi bi-send me-1"></i>Soumettre
+                                        l'évaluation</button>
+                                    <button type="button" class="btn btn-outline-secondary">Sauvegarder
+                                        brouillon</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header"><span class="card-title">Statut des évaluations</span></div>
+                    <div class="card-body p-0">
+                        <table class="app-table">
+                            <thead>
+                                <tr>
+                                    <th>Étudiant</th>
+                                    <th>Rapport</th>
+                                    <th>Soutenance</th>
+                                    <th>Implication</th>
+                                    <th>Journal</th>
+                                    <th>Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ahmed Diallo</td>
+                                    <td>16/20</td>
+                                    <td>15/20</td>
+                                    <td>17/20</td>
+                                    <td>14/20</td>
+                                    <td><span class="status-badge status-valide">Soumis</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sara Benali</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td><span class="status-badge status-en-attente">À compléter</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Karim Traoré</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td>—</td>
+                                    <td><span class="status-badge status-en-attente">À compléter</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Enseignant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

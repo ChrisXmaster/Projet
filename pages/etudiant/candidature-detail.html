@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail candidature — Étudiant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-etudiant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="offres-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Offres de stage</a>
+                <a href="mes-candidatures.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-send"></i></span>Mes candidatures</a>
+                <a href="mon-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Mon stage</a>
+                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-text"></i></span>Journal de stage</a>
+                <a href="documents.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-folder2"></i></span>Documents</a>
+                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Mes évaluations</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Ahmed Diallo</div>
+                        <div class="user-role">Étudiant M2 Info</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button></div>
+            </header>
+            <main class="page-content">
+                <nav aria-label="breadcrumb" class="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="mes-candidatures.html">Candidatures</a></li>
+                        <li class="breadcrumb-item active">Développeur Full-Stack</li>
+                    </ol>
+                </nav>
+                <div class="page-header mt-2 d-flex justify-content-between align-items-start">
+                    <div>
+                        <h1 class="page-title">Développeur Full-Stack React/Node</h1>
+                        <p class="page-subtitle">TechParis SAS · Paris 9e &nbsp; <span
+                                class="status-badge status-en-cours">En cours</span></p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <!-- Timeline de validation -->
+                        <div class="card mb-4">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-diagram-3 me-2 text-role"></i>Suivi de validation</span></div>
+                            <div class="card-body">
+                                <div class="validation-timeline">
+                                    <div class="timeline-step">
+                                        <div class="timeline-dot done"><i class="bi bi-check"></i></div>
+                                        <div class="timeline-title">✅ Niveau 1 — Enseignant encadrant</div>
+                                        <div class="timeline-meta">Validé par M. Martin le 05/03/2026 · <em>"Excellent
+                                                candidat, bien préparé"</em></div>
+                                    </div>
+                                    <div class="timeline-step">
+                                        <div class="timeline-dot done"><i class="bi bi-check"></i></div>
+                                        <div class="timeline-title">✅ Niveau 2 — Chef de département</div>
+                                        <div class="timeline-meta">Approuvé par Mme Leclerc le 07/03/2026</div>
+                                    </div>
+                                    <div class="timeline-step">
+                                        <div class="timeline-dot active"><i class="bi bi-hourglass"></i></div>
+                                        <div class="timeline-title">⏳ Niveau 3 — Coordinateur de stage</div>
+                                        <div class="timeline-meta">En attente de validation finale — Soumis le
+                                            08/03/2026</div>
+                                    </div>
+                                    <div class="timeline-step">
+                                        <div class="timeline-dot" style="color:#6c757d;"><i class="bi bi-building"></i>
+                                        </div>
+                                        <div class="timeline-title" style="color:#6c757d;">Niveau 4 — Confirmation
+                                            entreprise</div>
+                                        <div class="timeline-meta" style="color:#6c757d;">En attente</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ma lettre de motivation -->
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-envelope-open me-2 text-role"></i>Ma lettre de motivation</span>
+                            </div>
+                            <div class="card-body" style="font-size:0.875rem;line-height:1.8;color:#495057;">
+                                <p>Madame, Monsieur,</p>
+                                <p>Actuellement étudiant en Master 2 Informatique (Parcours IA & Big Data) à
+                                    l'Université Paris-Saclay, je me permets de vous adresser ma candidature pour le
+                                    poste de Développeur Full-Stack React/Node au sein de votre entreprise...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title">Détails de l'offre</span></div>
+                            <div class="card-body"
+                                style="font-size:0.875rem;display:flex;flex-direction:column;gap:12px;">
+                                <div><strong>Entreprise</strong><br><span style="color:#6c757d;">TechParis SAS</span>
+                                </div>
+                                <div><strong>Durée</strong><br><span style="color:#6c757d;">6 mois · Mars–Août
+                                        2026</span></div>
+                                <div><strong>Localisation</strong><br><span style="color:#6c757d;"><i
+                                            class="bi bi-geo-alt text-role"></i> Paris 9e (75009)</span></div>
+                                <div><strong>Gratification</strong><br><span style="color:#6c757d;">1 100€ / mois</span>
+                                </div>
+                                <div><strong>Encadrant académique</strong><br><span style="color:#6c757d;">M. Jean
+                                        Martin</span></div>
+                                <div><strong>Date de candidature</strong><br><span style="color:#6c757d;">01 Mars
+                                        2026</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

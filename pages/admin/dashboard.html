@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord — Administrateur | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="role-admin">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-shield-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Administration</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <div class="sidebar-section-title">Gestion des utilisateurs</div>
+                <a href="gestion-utilisateurs.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Utilisateurs</a>
+                <a href="gestion-formations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-mortarboard"></i></span>Formations</a>
+                <a href="gestion-entreprises.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Entreprises</a>
+                <div class="sidebar-section-title">Supervision</div>
+                <a href="logs-activite.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-activity"></i></span>Journal d'activité</a>
+                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-graph-up"></i></span>Statistiques globales</a>
+                <div class="sidebar-section-title">Configuration</div>
+                <a href="parametres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-sliders"></i></span>Paramètres</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Admin Dupuis</div>
+                        <div class="user-role">Super Administrateur</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher..."></div>
+                </div>
+                <div class="navbar-end">
+                    <button class="nav-icon-btn"><i class="bi bi-bell"></i><span class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">AD</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Panneau d'administration 🛡️</h1>
+                    <p class="page-subtitle">Vue d'ensemble de la plateforme StageConnect</p>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+                            <div>
+                                <div class="stat-value">342</div>
+                                <div class="stat-label">Utilisateurs actifs</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> +24 ce mois</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-building-fill"></i></div>
+                            <div>
+                                <div class="stat-value">54</div>
+                                <div class="stat-label">Entreprises</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> +3 ce mois</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div>
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Formations</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+                            <div>
+                                <div class="stat-value">87</div>
+                                <div class="stat-label">Stages en cours</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> +12 vs S1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-activity me-2 text-role"></i>Activité récente</span><a
+                                    href="logs-activite.html" class="btn btn-sm btn-outline-primary">Voir les logs</a>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-wrapper">
+                                    <table class="app-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Utilisateur</th>
+                                                <th>Action</th>
+                                                <th>Rôle</th>
+                                                <th>Date / Heure</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Sophie Chabert</strong></td>
+                                                <td>Convention validée — Ahmed Diallo</td>
+                                                <td>Coordinateur</td>
+                                                <td>Aujourd'hui 10:15</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>TechParis SAS</strong></td>
+                                                <td>Nouvelle offre publiée</td>
+                                                <td>Entreprise</td>
+                                                <td>Aujourd'hui 09:42</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Prof. Lagrange</strong></td>
+                                                <td>Convention approuvée</td>
+                                                <td>Chef Dépt.</td>
+                                                <td>Hier 16:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Ahmed Diallo</strong></td>
+                                                <td>Candidature envoyée</td>
+                                                <td>Étudiant</td>
+                                                <td>Hier 14:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dr. Moreau</strong></td>
+                                                <td>Rapport de visite soumis</td>
+                                                <td>Enseignant</td>
+                                                <td>Hier 11:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card mb-3">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-pie-chart me-2 text-role"></i>Répartition des utilisateurs</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="height:150px;"><canvas id="chartUsers"></canvas>
+                                </div>
+                                <div class="d-flex flex-column gap-1 mt-2" style="font-size:0.78rem;">
+                                    <div class="d-flex justify-content-between"><span>👨‍🎓
+                                            Étudiants</span><strong>240</strong></div>
+                                    <div class="d-flex justify-content-between"><span>👨‍🏫
+                                            Enseignants</span><strong>38</strong></div>
+                                    <div class="d-flex justify-content-between"><span>🏢
+                                            Entreprises</span><strong>54</strong></div>
+                                    <div class="d-flex justify-content-between"><span>🏛️ Staff
+                                            admin</span><strong>10</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-lightning-charge me-2 text-role"></i>Actions rapides</span></div>
+                            <div class="card-body d-flex flex-column gap-2">
+                                <a href="gestion-utilisateurs.html"
+                                    class="btn btn-sm btn-outline-secondary text-start"><i
+                                        class="bi bi-person-plus me-2 text-role"></i>Ajouter un utilisateur</a>
+                                <a href="gestion-entreprises.html"
+                                    class="btn btn-sm btn-outline-secondary text-start"><i
+                                        class="bi bi-building-add me-2 text-role"></i>Ajouter une entreprise</a>
+                                <a href="parametres.html" class="btn btn-sm btn-outline-secondary text-start"><i
+                                        class="bi bi-sliders me-2 text-role"></i>Paramètres système</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Administration</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/charts.js"></script>
+</body>
+
+</html>

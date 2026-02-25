@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil — Enseignant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-enseignant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-person-badge-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Enseignant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="mes-etudiants.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes étudiants</a>
+                <a href="candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Candidatures</a>
+                <a href="visites-terrain.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-map"></i></span>Visites terrain</a>
+                <a href="evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-clipboard-check"></i></span>Évaluations</a>
+                <a href="rapports.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-richtext"></i></span>Rapports</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar" style="background:#198754;">JM</div>
+                    <div class="user-info">
+                        <div class="user-name">Jean Martin</div>
+                        <div class="user-role">Maître de conférences</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i></button></div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Mon profil</h1>
+                    <p class="page-subtitle">Gérez vos informations</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card text-center">
+                            <div class="card-body py-4">
+                                <div
+                                    style="width:88px;height:88px;border-radius:50%;background:#198754;display:flex;align-items:center;justify-content:center;font-size:2rem;color:white;font-weight:800;margin:0 auto 16px;">
+                                    JM</div>
+                                <h5 style="font-weight:700;margin-bottom:4px;">Jean Martin</h5>
+                                <p style="color:#6c757d;font-size:0.85rem;margin-bottom:12px;">Maître de conférences</p>
+                                <span class="status-badge status-valide">Actif</span>
+                                <div
+                                    style="margin-top:20px;padding-top:16px;border-top:1px solid #e9ecef;font-size:0.82rem;color:#6c757d;text-align:left;display:flex;flex-direction:column;gap:10px;">
+                                    <div class="d-flex gap-2"><i class="bi bi-envelope" style="color:#198754;"></i>
+                                        j.martin@univ.fr</div>
+                                    <div class="d-flex gap-2"><i class="bi bi-phone" style="color:#198754;"></i> 01 23
+                                        45 67 89</div>
+                                    <div class="d-flex gap-2"><i class="bi bi-building" style="color:#198754;"></i> Dpt.
+                                        Informatique</div>
+                                    <div class="d-flex gap-2"><i class="bi bi-people" style="color:#198754;"></i> 8
+                                        étudiants encadrés</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i class="bi bi-pencil me-2"
+                                        style="color:#198754;"></i>Modifier mes informations</span></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Prénom</label><input type="text"
+                                                class="form-control form-control-sm" value="Jean"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Nom</label><input type="text"
+                                                class="form-control form-control-sm" value="Martin"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Email</label><input type="email"
+                                                class="form-control form-control-sm" value="j.martin@univ.fr"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Téléphone</label><input type="tel"
+                                                class="form-control form-control-sm" value="01 23 45 67 89"></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Grade</label><input type="text"
+                                                class="form-control form-control-sm"
+                                                value="Maître de conférences — HDR"></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Spécialités</label><input type="text"
+                                                class="form-control form-control-sm"
+                                                value="Intelligence artificielle, Systèmes distribués, Bases de données">
+                                        </div>
+                                        <div class="col-12 d-flex gap-2 mt-2"><button type="submit"
+                                                style="background:#198754;color:white;border:none;padding:8px 20px;border-radius:8px;font-weight:600;cursor:pointer;"><i
+                                                    class="bi bi-save me-1"></i>Enregistrer</button><button
+                                                type="button" class="btn btn-outline-secondary">Annuler</button></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Enseignant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

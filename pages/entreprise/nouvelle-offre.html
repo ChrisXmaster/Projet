@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvelle Offre | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-entreprise">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Entreprise</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="nouvelle-offre.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-plus-circle"></i></span>Publier une offre</a>
+                <a href="mes-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Mes offres</a>
+                <div class="sidebar-section-title">Candidatures</div>
+                <a href="candidatures-recues.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-inbox"></i></span>Candidatures reçues <span class="link-badge">7</span></a>
+                <a href="mes-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes stagiaires</a>
+                <a href="evaluer-stagiaire.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluer un stagiaire</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Profil entreprise</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">TP</div>
+                    <div class="user-info">
+                        <div class="user-name">TechParis SAS</div>
+                        <div class="user-role">Entreprise partenaire</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="search" class="form-control" placeholder="Rechercher...">
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <button class="nav-icon-btn"><i class="bi bi-bell"></i><span class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
+                </div>
+            </header>
+
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Publier une nouvelle offre</h1>
+                        <p class="page-subtitle">Remplissez le formulaire pour publier une offre de stage</p>
+                    </div>
+                    <a href="mes-offres.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-2"></i>Mes
+                        offres</a>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-file-earmark-text me-2 text-role"></i>Détails
+                                    de l'offre</span>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">Intitulé du poste <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Ex: Développeur Full-Stack">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Domaine <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select">
+                                                <option value="">Sélectionner...</option>
+                                                <option>Informatique / Développement</option>
+                                                <option>Data / Intelligence Artificielle</option>
+                                                <option>Réseaux / Systèmes</option>
+                                                <option>Cybersécurité</option>
+                                                <option>UX / Design</option>
+                                                <option>Marketing Digital</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Niveau requis <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select">
+                                                <option>Bac+2 / BTS / DUT</option>
+                                                <option>Bac+3 / Licence</option>
+                                                <option>Bac+4 / Master 1</option>
+                                                <option selected>Bac+5 / Master 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Durée <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select">
+                                                <option>2 mois</option>
+                                                <option>3 mois</option>
+                                                <option>4 mois</option>
+                                                <option>5 mois</option>
+                                                <option selected>6 mois</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Gratification (€/mois)</label>
+                                            <input type="number" class="form-control" placeholder="Ex: 700">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Date de début souhaitée</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Date limite de candidature</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Ville</label>
+                                            <input type="text" class="form-control" placeholder="Ex: Paris">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Télétravail</label>
+                                            <select class="form-select">
+                                                <option>Présentiel uniquement</option>
+                                                <option>Hybride</option>
+                                                <option>Télétravail complet</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">Description du poste <span
+                                                    class="text-danger">*</span></label>
+                                            <textarea class="form-control" rows="5"
+                                                placeholder="Décrivez les missions, le contexte et les objectifs du stage..."></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">Compétences requises</label>
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Ex: JavaScript, React, Node.js, SQL..."></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">Profil recherché</label>
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Qualités et formation attendues..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 d-flex gap-2">
+                                        <button type="submit" class="btn-role"><i class="bi bi-send me-2"></i>Publier
+                                            l'offre</button>
+                                        <button type="button" class="btn btn-outline-secondary"><i
+                                                class="bi bi-save me-2"></i>Enregistrer brouillon</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-info-circle me-2 text-role"></i>Conseils</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-column gap-3" style="font-size:0.85rem;">
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
+                                        <span>Un intitulé clair et précis attire plus de candidatures qualifiées</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
+                                        <span>Détaillez les missions pour aider les étudiants à se projeter</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
+                                        <span>Mentionnez la gratification pour augmenter les candidatures</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1"></i>
+                                        <span>Votre offre sera visible après validation par le coordinateur</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="app-footer">
+                <span>StageConnect &copy; 2026</span>
+                <span>Espace Entreprise</span>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

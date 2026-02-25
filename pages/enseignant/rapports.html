@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapports — Enseignant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-enseignant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-person-badge-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Enseignant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="mes-etudiants.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes étudiants</a>
+                <a href="candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Candidatures</a>
+                <a href="visites-terrain.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-map"></i></span>Visites terrain</a>
+                <a href="evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-clipboard-check"></i></span>Évaluations</a>
+                <a href="rapports.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-journal-richtext"></i></span>Rapports</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar" style="background:#198754;">JM</div>
+                    <div class="user-info">
+                        <div class="user-name">Jean Martin</div>
+                        <div class="user-role">Maître de conférences</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i></button></div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Rapports à réviser</h1>
+                    <p class="page-subtitle">Examinez et annotez les rapports de vos étudiants</p>
+                </div>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <table class="app-table">
+                            <thead>
+                                <tr>
+                                    <th>Étudiant</th>
+                                    <th>Document</th>
+                                    <th>Type</th>
+                                    <th>Déposé le</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ahmed Diallo</strong>
+                                        <div style="color:#6c757d;font-size:0.75rem;">M2 Informatique</div>
+                                    </td>
+                                    <td><i
+                                            class="bi bi-file-earmark-pdf text-danger me-1"></i>rapport_intermediaire_sem5.pdf
+                                    </td>
+                                    <td>Intermédiaire</td>
+                                    <td>14/02/2026</td>
+                                    <td><span class="status-badge status-en-attente">En révision</span></td>
+                                    <td><button class="btn btn-sm btn-success me-1"><i class="bi bi-check"></i>
+                                            Approuver</button><button class="btn btn-sm btn-outline-danger"><i
+                                                class="bi bi-chat-dots"></i> Retour</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sara Benali</strong>
+                                        <div style="color:#6c757d;font-size:0.75rem;">M1 Informatique</div>
+                                    </td>
+                                    <td><i
+                                            class="bi bi-file-earmark-word text-primary me-1"></i>rapport_final_benali.docx
+                                    </td>
+                                    <td>Final</td>
+                                    <td>28/01/2026</td>
+                                    <td><span class="status-badge status-valide">Approuvé</span></td>
+                                    <td><button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i>
+                                            Voir</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Karim Traoré</strong>
+                                        <div style="color:#6c757d;font-size:0.75rem;">L3 Informatique</div>
+                                    </td>
+                                    <td><i class="bi bi-file-earmark-pdf text-danger me-1"></i>rapport_debut_traore.pdf
+                                    </td>
+                                    <td>Début de stage</td>
+                                    <td>10/02/2026</td>
+                                    <td><span class="status-badge status-refuse">Retourné</span></td>
+                                    <td><button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i>
+                                            Voir</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Enseignant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

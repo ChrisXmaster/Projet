@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postuler — Étudiant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-etudiant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="offres-stage.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Offres de stage</a>
+                <a href="mes-candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-send"></i></span>Mes candidatures</a>
+                <a href="mon-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Mon stage</a>
+                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-text"></i></span>Journal de stage</a>
+                <a href="documents.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-folder2"></i></span>Documents</a>
+                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Mes évaluations</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Ahmed Diallo</div>
+                        <div class="user-role">Étudiant M2 Info</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button></div>
+            </header>
+            <main class="page-content">
+                <nav aria-label="breadcrumb" class="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="offres-stage.html">Offres</a></li>
+                        <li class="breadcrumb-item active">Postuler</li>
+                    </ol>
+                </nav>
+                <div class="page-header mt-2">
+                    <h1 class="page-title">Soumettre ma candidature</h1>
+                    <p class="page-subtitle">Développeur Full-Stack React/Node — TechParis SAS</p>
+                </div>
+
+                <!-- Stepper -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="stepper">
+                            <div class="step-item">
+                                <div>
+                                    <div class="step-bubble active">1</div>
+                                    <div class="step-label">Informations</div>
+                                </div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-item">
+                                <div>
+                                    <div class="step-bubble">2</div>
+                                    <div class="step-label">Documents</div>
+                                </div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-item">
+                                <div>
+                                    <div class="step-bubble">3</div>
+                                    <div class="step-label">Lettre</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title">Informations personnelles</span></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Prénom <span
+                                                    class="text-danger">*</span></label><input type="text"
+                                                class="form-control form-control-sm" value="Ahmed" required></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Nom <span
+                                                    class="text-danger">*</span></label><input type="text"
+                                                class="form-control form-control-sm" value="Diallo" required></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Email <span
+                                                    class="text-danger">*</span></label><input type="email"
+                                                class="form-control form-control-sm" value="ahmed.diallo@univ.fr"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Téléphone</label><input type="tel"
+                                                class="form-control form-control-sm" value="06 12 34 56 78"></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Formation actuelle</label><input type="text"
+                                                class="form-control form-control-sm"
+                                                value="Master 2 Informatique – Parcours IA & Big Data"></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Disponibilité souhaitée</label><input
+                                                type="date" class="form-control form-control-sm" value="2026-03-01">
+                                        </div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Message pour le recruteur</label><textarea
+                                                class="form-control form-control-sm" rows="4"
+                                                placeholder="Parlez-nous de votre motivation, de vos compétences clés..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-4">
+                                        <a href="mes-candidatures.html" class="btn btn-primary"
+                                            onclick="return confirm('Envoyer la candidature ?');">
+                                            <i class="bi bi-send me-1"></i> Envoyer la candidature
+                                        </a>
+                                        <button type="button" class="btn btn-outline-secondary">Étape suivante <i
+                                                class="bi bi-arrow-right"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title">Récapitulatif de l'offre</span></div>
+                            <div class="card-body">
+                                <div style="font-size:0.875rem;display:flex;flex-direction:column;gap:12px;">
+                                    <div><strong>Poste</strong><br><span style="color:#6c757d;">Développeur Full-Stack
+                                            React/Node</span></div>
+                                    <div><strong>Entreprise</strong><br><span style="color:#6c757d;">TechParis
+                                            SAS</span></div>
+                                    <div><strong>Localisation</strong><br><span style="color:#6c757d;"><i
+                                                class="bi bi-geo-alt text-role"></i> Paris 9e</span></div>
+                                    <div><strong>Durée</strong><br><span style="color:#6c757d;">6 mois (Mars – Août
+                                            2026)</span></div>
+                                    <div><strong>Gratification</strong><br><span style="color:#6c757d;">1 100€ /
+                                            mois</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

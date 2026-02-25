@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil — Étudiant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-etudiant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="offres-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Offres de stage</a>
+                <a href="mes-candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-send"></i></span>Mes candidatures</a>
+                <a href="mon-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Mon stage</a>
+                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-text"></i></span>Journal de stage</a>
+                <a href="documents.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-folder2"></i></span>Documents</a>
+                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Mes évaluations</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Ahmed Diallo</div>
+                        <div class="user-role">Étudiant M2 Info</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button></div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Mon profil</h1>
+                    <p class="page-subtitle">Gérez vos informations personnelles</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Avatar & infos rapides -->
+                    <div class="col-lg-4">
+                        <div class="card text-center">
+                            <div class="card-body py-4">
+                                <div
+                                    style="width:88px;height:88px;border-radius:50%;background:#0d6efd;display:flex;align-items:center;justify-content:center;font-size:2rem;color:white;font-weight:800;margin:0 auto 16px;">
+                                    AD</div>
+                                <h5 style="font-weight:700;margin-bottom:4px;">Ahmed Diallo</h5>
+                                <p style="color:#6c757d;font-size:0.85rem;margin-bottom:12px;">Étudiant M2 Informatique
+                                </p>
+                                <span class="status-badge status-en-cours">En stage</span>
+                                <div
+                                    style="margin-top:20px;padding-top:16px;border-top:1px solid #e9ecef;font-size:0.82rem;color:#6c757d;text-align:left;display:flex;flex-direction:column;gap:10px;">
+                                    <div class="d-flex gap-2"><i class="bi bi-envelope text-role"></i>
+                                        ahmed.diallo@univ.fr</div>
+                                    <div class="d-flex gap-2"><i class="bi bi-phone text-role"></i> 06 12 34 56 78</div>
+                                    <div class="d-flex gap-2"><i class="bi bi-geo-alt text-role"></i> Paris, France
+                                    </div>
+                                    <div class="d-flex gap-2"><i class="bi bi-calendar text-role"></i> Inscrit le
+                                        01/09/2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Formulaire -->
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-pencil me-2 text-role"></i>Modifier mes informations</span></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Prénom</label><input type="text"
+                                                class="form-control form-control-sm" value="Ahmed"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Nom</label><input type="text"
+                                                class="form-control form-control-sm" value="Diallo"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Email</label><input type="email"
+                                                class="form-control form-control-sm" value="ahmed.diallo@univ.fr"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Téléphone</label><input type="tel"
+                                                class="form-control form-control-sm" value="06 12 34 56 78"></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Formation</label><input type="text"
+                                                class="form-control form-control-sm"
+                                                value="Master 2 Informatique — Parcours IA & Big Data"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Numéro étudiant</label><input type="text"
+                                                class="form-control form-control-sm" value="21234567"></div>
+                                        <div class="col-md-6"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Département</label><select
+                                                class="form-select form-select-sm">
+                                                <option selected>Informatique</option>
+                                                <option>Mathématiques</option>
+                                                <option>Sciences</option>
+                                            </select></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Compétences (séparées par des
+                                                virgules)</label><input type="text" class="form-control form-control-sm"
+                                                value="React, Node.js, Python, PostgreSQL, Docker, Git"></div>
+                                        <div class="col-12"><label class="form-label fw-600"
+                                                style="font-size:0.82rem;">Présentation</label><textarea
+                                                class="form-control form-control-sm"
+                                                rows="3">Étudiant passionné par le développement web et l'intelligence artificielle. Recherche des opportunités pour appliquer mes compétences dans un environnement professionnel stimulant.</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-4">
+                                        <button type="submit" class="btn-role"><i class="bi bi-save"></i>
+                                            Enregistrer</button>
+                                        <button type="button" class="btn btn-outline-secondary">Annuler</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

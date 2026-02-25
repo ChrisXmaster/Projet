@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations en attente — Chef de Département | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-chef-dept">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building-gear-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Chef de Département</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <div class="sidebar-section-title">Validations</div>
+                <a href="validations-en-attente.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-clipboard-check"></i></span>Validations en attente <span
+                        class="link-badge">5</span></a>
+                <a href="historique-validations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-clock-history"></i></span>Historique</a>
+                <div class="sidebar-section-title">Analyse</div>
+                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-graph-up"></i></span>Statistiques</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">4</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">PL</div>
+                    <div class="user-info">
+                        <div class="user-name">Prof. Lagrange</div>
+                        <div class="user-role">Chef Dépt. Informatique</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">PL</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Conventions à approuver</h1>
+                        <p class="page-subtitle">5 conventions en attente de votre décision (Niveau 2)</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-wrapper">
+                            <table class="app-table">
+                                <thead>
+                                    <tr>
+                                        <th>Étudiant</th>
+                                        <th>Entreprise / Poste</th>
+                                        <th>Enseignant encadrant</th>
+                                        <th>Validé enseignant</th>
+                                        <th>Date soumission</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Ahmed Diallo</strong><br><small class="text-muted">M2
+                                                Informatique</small></td>
+                                        <td>TechParis SAS<br><small class="text-muted">Développeur Full-Stack</small>
+                                        </td>
+                                        <td>Dr. Moreau</td>
+                                        <td><span class="status-badge status-valide">✓ Validé</span></td>
+                                        <td>20 Fév. 2026</td>
+                                        <td><a href="validation-detail.html" class="btn btn-sm btn-role">Examiner</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Marie Lefèvre</strong><br><small class="text-muted">M2 Data
+                                                Science</small></td>
+                                        <td>AI Solutions<br><small class="text-muted">Data Analyst</small></td>
+                                        <td>Dr. Bernard</td>
+                                        <td><span class="status-badge status-valide">✓ Validé</span></td>
+                                        <td>19 Fév. 2026</td>
+                                        <td><a href="validation-detail.html" class="btn btn-sm btn-role">Examiner</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lucas Martin</strong><br><small class="text-muted">M1 Génie
+                                                Logiciel</small></td>
+                                        <td>CloudStack<br><small class="text-muted">DevOps Engineer</small></td>
+                                        <td>Dr. Petit</td>
+                                        <td><span class="status-badge status-valide">✓ Validé</span></td>
+                                        <td>18 Fév. 2026</td>
+                                        <td><a href="validation-detail.html" class="btn btn-sm btn-role">Examiner</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fatima Okon</strong><br><small class="text-muted">M2
+                                                Cybersécurité</small></td>
+                                        <td>SecureNet<br><small class="text-muted">Analyste Cybersécurité</small></td>
+                                        <td>Dr. Laurent</td>
+                                        <td><span class="status-badge status-valide">✓ Validé</span></td>
+                                        <td>17 Fév. 2026</td>
+                                        <td><a href="validation-detail.html" class="btn btn-sm btn-role">Examiner</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Simon Blanc</strong><br><small class="text-muted">M1 Réseaux</small>
+                                        </td>
+                                        <td>NetCore<br><small class="text-muted">Admin Réseaux</small></td>
+                                        <td>Dr. Rousseau</td>
+                                        <td><span class="status-badge status-valide">✓ Validé</span></td>
+                                        <td>16 Fév. 2026</td>
+                                        <td><a href="validation-detail.html" class="btn btn-sm btn-role">Examiner</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Dept. Informatique</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

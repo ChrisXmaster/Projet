@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier l'offre | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-entreprise">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Entreprise</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="nouvelle-offre.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-plus-circle"></i></span>Publier une offre</a>
+                <a href="mes-offres.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Mes offres</a>
+                <div class="sidebar-section-title">Candidatures</div>
+                <a href="candidatures-recues.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-inbox"></i></span>Candidatures reçues <span class="link-badge">7</span></a>
+                <a href="mes-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes stagiaires</a>
+                <a href="evaluer-stagiaire.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluer un stagiaire</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Profil entreprise</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">TP</div>
+                    <div class="user-info">
+                        <div class="user-name">TechParis SAS</div>
+                        <div class="user-role">Entreprise partenaire</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Modifier l'offre</h1>
+                        <p class="page-subtitle">Développeur Full-Stack — publiée le 1 Fév. 2026</p>
+                    </div>
+                    <a href="mes-offres.html" class="btn btn-outline-secondary"><i
+                            class="bi bi-arrow-left me-2"></i>Retour</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-pencil me-2 text-role"></i>Modifier les détails</span></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-12"><label class="form-label fw-semibold">Intitulé du
+                                                poste</label><input type="text" class="form-control"
+                                                value="Développeur Full-Stack"></div>
+                                        <div class="col-md-6"><label
+                                                class="form-label fw-semibold">Domaine</label><select
+                                                class="form-select">
+                                                <option selected>Informatique / Développement</option>
+                                                <option>Data / Intelligence Artificielle</option>
+                                                <option>Réseaux / Systèmes</option>
+                                            </select></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Niveau
+                                                requis</label><select class="form-select">
+                                                <option>Bac+3</option>
+                                                <option>Bac+4</option>
+                                                <option selected>Bac+5 / Master 2</option>
+                                            </select></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Durée</label><select
+                                                class="form-select">
+                                                <option>4 mois</option>
+                                                <option>5 mois</option>
+                                                <option selected>6 mois</option>
+                                            </select></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Gratification
+                                                (€/mois)</label><input type="number" class="form-control" value="700">
+                                        </div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Date de
+                                                début</label><input type="date" class="form-control" value="2026-03-01">
+                                        </div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Date limite de
+                                                candidature</label><input type="date" class="form-control"
+                                                value="2026-02-28"></div>
+                                        <div class="col-md-6"><label class="form-label fw-semibold">Ville</label><input
+                                                type="text" class="form-control" value="Paris"></div>
+                                        <div class="col-md-6"><label
+                                                class="form-label fw-semibold">Télétravail</label><select
+                                                class="form-select">
+                                                <option>Présentiel uniquement</option>
+                                                <option selected>Hybride</option>
+                                                <option>Télétravail complet</option>
+                                            </select></div>
+                                        <div class="col-12"><label class="form-label fw-semibold">Description du
+                                                poste</label><textarea class="form-control"
+                                                rows="5">Nous recherchons un stagiaire développeur full-stack pour rejoindre notre équipe technique. Vous travaillerez sur des projets clients en utilisant React, Node.js et PostgreSQL.</textarea>
+                                        </div>
+                                        <div class="col-12"><label class="form-label fw-semibold">Compétences
+                                                requises</label><textarea class="form-control"
+                                                rows="3">React, Node.js, Express, PostgreSQL, Git, Docker</textarea>
+                                        </div>
+                                        <div class="col-12"><label class="form-label fw-semibold">Profil
+                                                recherché</label><textarea class="form-control"
+                                                rows="3">Étudiant en Master 2 Informatique ou équivalent, autonome et curieux.</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 d-flex gap-2">
+                                        <button type="submit" class="btn-role"><i
+                                                class="bi bi-save me-2"></i>Enregistrer les modifications</button>
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-x-circle me-2"></i>Fermer l'offre</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card mb-3">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-bar-chart me-2 text-role"></i>Statistiques</span></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2"><span
+                                        style="font-size:0.85rem;">Vues</span><strong>147</strong></div>
+                                <div class="d-flex justify-content-between mb-2"><span
+                                        style="font-size:0.85rem;">Candidatures reçues</span><strong
+                                        class="text-role">12</strong></div>
+                                <div class="d-flex justify-content-between mb-2"><span style="font-size:0.85rem;">En
+                                        attente</span><strong style="color:#b45309;">7</strong></div>
+                                <div class="d-flex justify-content-between"><span
+                                        style="font-size:0.85rem;">Retenues</span><strong
+                                        class="text-success">2</strong></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-info-circle me-2 text-role"></i>Statut</span></div>
+                            <div class="card-body">
+                                <span class="status-badge status-valide mb-2 d-inline-block">Active</span>
+                                <p style="font-size:0.82rem;color:#6c757d;">Cette offre expire le <strong>28 Fév.
+                                        2026</strong>. Elle sera automatiquement archivée après cette date.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Entreprise</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

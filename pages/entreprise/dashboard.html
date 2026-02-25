@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord — Entreprise | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="role-entreprise">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Entreprise</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="nouvelle-offre.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-plus-circle"></i></span>Publier une offre</a>
+                <a href="mes-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Mes offres</a>
+                <div class="sidebar-section-title">Candidatures</div>
+                <a href="candidatures-recues.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-inbox"></i></span>Candidatures reçues <span class="link-badge">7</span></a>
+                <a href="mes-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes stagiaires</a>
+                <a href="evaluer-stagiaire.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluer un stagiaire</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Profil entreprise</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">TP</div>
+                    <div class="user-info">
+                        <div class="user-name">TechParis SAS</div>
+                        <div class="user-role">Entreprise partenaire</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-content" id="mainContent">
+            <!-- Navbar -->
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper">
+                        <i class="bi bi-search search-icon"></i>
+                        <input type="search" class="form-control" placeholder="Rechercher...">
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <button class="nav-icon-btn"><i class="bi bi-bell"></i><span class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <a href="profil.html" class="d-flex align-items-center gap-2 text-decoration-none"
+                        style="color:inherit;">
+                        <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
+                        <span style="font-size:0.85rem;font-weight:600;">TechParis SAS</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Bienvenue, TechParis 🏢</h1>
+                    <p class="page-subtitle">Gérez vos offres, candidatures et stagiaires</p>
+                </div>
+
+                <!-- Stat Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-briefcase-fill"></i></div>
+                            <div>
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Offres actives</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> +1 ce mois</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-inbox-fill"></i></div>
+                            <div>
+                                <div class="stat-value">23</div>
+                                <div class="stat-label">Candidatures reçues</div>
+                                <div class="stat-trend up"><i class="bi bi-arrow-up"></i> +7 ce mois</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+                            <div>
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Stagiaires en cours</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-hourglass-split"></i></div>
+                            <div>
+                                <div class="stat-value">7</div>
+                                <div class="stat-label">Candidatures en attente</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-inbox me-2 text-role"></i>Candidatures
+                                    récentes</span>
+                                <a href="candidatures-recues.html" class="btn btn-sm btn-outline-primary">Voir tout</a>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-wrapper">
+                                    <table class="app-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Candidat</th>
+                                                <th>Poste</th>
+                                                <th>Date</th>
+                                                <th>Statut</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Ahmed Diallo</strong></td>
+                                                <td>Développeur Full-Stack</td>
+                                                <td>20 Fév. 2026</td>
+                                                <td><span class="status-badge status-en-attente">En attente</span></td>
+                                                <td><a href="candidature-detail.html"
+                                                        class="btn btn-sm btn-outline-primary">Voir</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Marie Lefèvre</strong></td>
+                                                <td>Data Analyst</td>
+                                                <td>18 Fév. 2026</td>
+                                                <td><span class="status-badge status-valide">Retenue</span></td>
+                                                <td><a href="candidature-detail.html"
+                                                        class="btn btn-sm btn-outline-primary">Voir</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Lucas Martin</strong></td>
+                                                <td>Développeur Full-Stack</td>
+                                                <td>15 Fév. 2026</td>
+                                                <td><span class="status-badge status-refuse">Refusée</span></td>
+                                                <td><a href="candidature-detail.html"
+                                                        class="btn btn-sm btn-outline-primary">Voir</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <span class="card-title"><i class="bi bi-lightning me-2 text-role"></i>Actions
+                                    rapides</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <a href="nouvelle-offre.html" class="btn-role"><i class="bi bi-plus-circle"></i>
+                                        Publier une offre</a>
+                                    <a href="candidatures-recues.html" class="btn-outline-role"><i
+                                            class="bi bi-inbox"></i> Voir les candidatures</a>
+                                    <a href="mes-stagiaires.html" class="btn-outline-role"><i class="bi bi-people"></i>
+                                        Gérer les stagiaires</a>
+                                    <a href="evaluer-stagiaire.html" class="btn-outline-role"><i class="bi bi-star"></i>
+                                        Évaluer un stagiaire</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mes offres actives -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title"><i class="bi bi-briefcase me-2 text-role"></i>Mes offres actives</span>
+                        <a href="mes-offres.html" class="btn btn-sm btn-outline-primary">Gérer</a>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-wrapper">
+                            <table class="app-table">
+                                <thead>
+                                    <tr>
+                                        <th>Poste</th>
+                                        <th>Candidatures</th>
+                                        <th>Expiration</th>
+                                        <th>Statut</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Développeur Full-Stack</strong></td>
+                                        <td>12</td>
+                                        <td>28 Fév. 2026</td>
+                                        <td><span class="status-badge status-valide">Active</span></td>
+                                        <td>
+                                            <a href="offre-edit.html" class="btn btn-sm btn-outline-secondary me-1"><i
+                                                    class="bi bi-pencil"></i></a>
+                                            <a href="candidatures-recues.html"
+                                                class="btn btn-sm btn-outline-primary">Candidatures</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Data Analyst Junior</strong></td>
+                                        <td>8</td>
+                                        <td>15 Mar. 2026</td>
+                                        <td><span class="status-badge status-valide">Active</span></td>
+                                        <td>
+                                            <a href="offre-edit.html" class="btn btn-sm btn-outline-secondary me-1"><i
+                                                    class="bi bi-pencil"></i></a>
+                                            <a href="candidatures-recues.html"
+                                                class="btn btn-sm btn-outline-primary">Candidatures</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="app-footer">
+                <span>StageConnect &copy; 2026</span>
+                <span>Espace Entreprise</span>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

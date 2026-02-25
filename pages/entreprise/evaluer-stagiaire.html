@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluer un stagiaire | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-entreprise">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-building-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Entreprise</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="nouvelle-offre.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-plus-circle"></i></span>Publier une offre</a>
+                <a href="mes-offres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-briefcase"></i></span>Mes offres</a>
+                <div class="sidebar-section-title">Candidatures</div>
+                <a href="candidatures-recues.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-inbox"></i></span>Candidatures reçues</a>
+                <a href="mes-stagiaires.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes stagiaires</a>
+                <a href="evaluer-stagiaire.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-star"></i></span>Évaluer un stagiaire</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Profil entreprise</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">TP</div>
+                    <div class="user-info">
+                        <div class="user-name">TechParis SAS</div>
+                        <div class="user-role">Entreprise partenaire</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Évaluer un stagiaire</h1>
+                        <p class="page-subtitle">Grille d'évaluation professionnelle</p>
+                    </div>
+                    <a href="mes-stagiaires.html" class="btn btn-outline-secondary"><i
+                            class="bi bi-arrow-left me-2"></i>Retour</a>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-person me-2 text-role"></i>Stagiaire évalué</span></div>
+                            <div class="card-body text-center">
+                                <div class="user-avatar mx-auto mb-3" style="width:56px;height:56px;font-size:1.3rem;">
+                                    AD</div>
+                                <h6 style="font-weight:700;">Ahmed Diallo</h6>
+                                <p style="font-size:0.82rem;color:#6c757d;">Développeur Full-Stack<br>1 Mars – 31 Juil.
+                                    2026</p>
+                                <hr>
+                                <div class="mb-2">
+                                    <label class="form-label fw-semibold" style="font-size:0.85rem;">Sélectionner un
+                                        stagiaire</label>
+                                    <select class="form-select form-select-sm">
+                                        <option selected>Ahmed Diallo</option>
+                                        <option>Marie Lefèvre</option>
+                                        <option>Nicolas Dupont</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i
+                                        class="bi bi-star-fill me-2 text-role"></i>Grille d'évaluation</span></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-4">
+                                        <p style="font-size:0.82rem;color:#6c757d;margin-bottom:16px;">Notez chaque
+                                            critère de 1 (Insuffisant) à 5 (Excellent)</p>
+                                        <!-- Criteria rows -->
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label style="font-size:0.88rem;font-weight:600;flex:1;">Compétences
+                                                    techniques</label>
+                                                <div class="d-flex gap-1">
+                                                    <input type="radio" name="technique" class="btn-check"
+                                                        id="t1"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="t1">1</label>
+                                                    <input type="radio" name="technique" class="btn-check"
+                                                        id="t2"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="t2">2</label>
+                                                    <input type="radio" name="technique" class="btn-check"
+                                                        id="t3"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="t3">3</label>
+                                                    <input type="radio" name="technique" class="btn-check" id="t4"
+                                                        checked><label class="btn btn-outline-secondary btn-sm"
+                                                        for="t4">4</label>
+                                                    <input type="radio" name="technique" class="btn-check"
+                                                        id="t5"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="t5">5</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label style="font-size:0.88rem;font-weight:600;flex:1;">Autonomie et
+                                                    initiative</label>
+                                                <div class="d-flex gap-1">
+                                                    <input type="radio" name="autonomie" class="btn-check"
+                                                        id="a1"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="a1">1</label>
+                                                    <input type="radio" name="autonomie" class="btn-check"
+                                                        id="a2"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="a2">2</label>
+                                                    <input type="radio" name="autonomie" class="btn-check"
+                                                        id="a3"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="a3">3</label>
+                                                    <input type="radio" name="autonomie" class="btn-check" id="a4"
+                                                        checked><label class="btn btn-outline-secondary btn-sm"
+                                                        for="a4">4</label>
+                                                    <input type="radio" name="autonomie" class="btn-check"
+                                                        id="a5"><label class="btn btn-outline-secondary btn-sm"
+                                                        for="a5">5</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label style="font-size:0.88rem;font-weight:600;flex:1;">Qualité du
+                                                    travail rendu</label>
+                                                <div class="d-flex gap-1">
+                                                    <input type="radio" name="qualite" class="btn-check" id="q1"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="q1">1</label>
+                                                    <input type="radio" name="qualite" class="btn-check" id="q2"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="q2">2</label>
+                                                    <input type="radio" name="qualite" class="btn-check" id="q3"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="q3">3</label>
+                                                    <input type="radio" name="qualite" class="btn-check" id="q4"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="q4">4</label>
+                                                    <input type="radio" name="qualite" class="btn-check" id="q5"
+                                                        checked><label class="btn btn-outline-secondary btn-sm"
+                                                        for="q5">5</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label style="font-size:0.88rem;font-weight:600;flex:1;">Communication
+                                                    et intégration</label>
+                                                <div class="d-flex gap-1">
+                                                    <input type="radio" name="comm" class="btn-check" id="c1"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="c1">1</label>
+                                                    <input type="radio" name="comm" class="btn-check" id="c2"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="c2">2</label>
+                                                    <input type="radio" name="comm" class="btn-check" id="c3"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="c3">3</label>
+                                                    <input type="radio" name="comm" class="btn-check" id="c4"
+                                                        checked><label class="btn btn-outline-secondary btn-sm"
+                                                        for="c4">4</label>
+                                                    <input type="radio" name="comm" class="btn-check" id="c5"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="c5">5</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label style="font-size:0.88rem;font-weight:600;flex:1;">Respect des
+                                                    délais</label>
+                                                <div class="d-flex gap-1">
+                                                    <input type="radio" name="delais" class="btn-check" id="d1"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="d1">1</label>
+                                                    <input type="radio" name="delais" class="btn-check" id="d2"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="d2">2</label>
+                                                    <input type="radio" name="delais" class="btn-check" id="d3"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="d3">3</label>
+                                                    <input type="radio" name="delais" class="btn-check" id="d4"
+                                                        checked><label class="btn btn-outline-secondary btn-sm"
+                                                        for="d4">4</label>
+                                                    <input type="radio" name="delais" class="btn-check" id="d5"><label
+                                                        class="btn btn-outline-secondary btn-sm" for="d5">5</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Note globale /20</label>
+                                        <input type="number" class="form-control" min="0" max="20" value="16"
+                                            style="max-width:120px;">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Appréciation générale</label>
+                                        <textarea class="form-control" rows="4"
+                                            placeholder="Points forts, axes d'amélioration, recommandations...">Ahmed a fait preuve d'une grande rigueur technique et d'une intégration rapide dans l'équipe. Ses livrables sont de qualité et respectent les délais. Nous recommandons cet étudiant.</textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Recommandation</label>
+                                        <select class="form-select">
+                                            <option>Fortement recommandé(e)</option>
+                                            <option selected>Recommandé(e)</option>
+                                            <option>Acceptable</option>
+                                            <option>Non recommandé(e)</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn-role"><i class="bi bi-send me-2"></i>Soumettre
+                                        l'évaluation</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Entreprise</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord — Enseignant | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="role-enseignant">
+    <div class="sidebar-overlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-person-badge-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Espace Enseignant</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <a href="mes-etudiants.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Mes étudiants <span class="link-badge">8</span></a>
+                <a href="candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-file-earmark-check"></i></span>Candidatures <span
+                        class="link-badge">3</span></a>
+                <a href="visites-terrain.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-map"></i></span>Visites terrain</a>
+                <div class="sidebar-section-title">Suivi</div>
+                <a href="evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-clipboard-check"></i></span>Évaluations</a>
+                <a href="rapports.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-journal-richtext"></i></span>Rapports</a>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-person"></i></span>Mon profil</a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar" style="background:#198754;">JM</div>
+                    <div class="user-info">
+                        <div class="user-name">Jean Martin</div>
+                        <div class="user-role">Maître de conférences</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher un étudiant..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;background:#198754;">JM
+                    </div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">Bonjour, M. Martin 👋</h1>
+                    <p class="page-subtitle">Voici un aperçu de vos étudiants encadrés · <span id="liveClock"></span>
+                    </p>
+                </div>
+                <!-- Stats -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+                            <div class="stat-body">
+                                <div class="stat-value">8</div>
+                                <div class="stat-label">Étudiants encadrés</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+                            <div class="stat-body">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Candidatures à valider</div>
+                                <div class="stat-trend down">Urgent</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-clipboard-check-fill"></i></div>
+                            <div class="stat-body">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Évaluations à faire</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <div class="stat-body">
+                                <div class="stat-value">6</div>
+                                <div class="stat-label">Stages en cours</div>
+                                <div class="stat-trend up">+1 ce mois</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <!-- Mes étudiants -->
+                    <div class="col-lg-7">
+                        <div class="card">
+                            <div class="card-header"><span class="card-title"><i class="bi bi-people me-2"
+                                        style="color:#198754;"></i>Mes étudiants encadrés</span><a
+                                    href="mes-etudiants.html" class="btn-link">Voir tous <i
+                                        class="bi bi-arrow-right"></i></a></div>
+                            <div class="card-body p-0">
+                                <div class="table-wrapper">
+                                    <table class="app-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Étudiant</th>
+                                                <th>Stage / Entreprise</th>
+                                                <th>Progression</th>
+                                                <th>Statut</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <div class="user-avatar"
+                                                            style="width:32px;height:32px;font-size:0.75rem;background:#198754;">
+                                                            AD</div>
+                                                        <div>
+                                                            <div style="font-weight:600;font-size:0.85rem;">Ahmed Diallo
+                                                            </div>
+                                                            <div style="color:#6c757d;font-size:0.75rem;">M2 Info</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="font-size:0.82rem;font-weight:600;">Dev Full-Stack</div>
+                                                    <div style="font-size:0.75rem;color:#6c757d;">TechParis SAS</div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress-custom" style="width:80px;margin-bottom:2px;">
+                                                        <div class="progress-bar-custom" style="width:42%;"></div>
+                                                    </div>
+                                                    <div style="font-size:0.72rem;color:#6c757d;">42%</div>
+                                                </td>
+                                                <td><span class="status-badge status-en-cours">En cours</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <div class="user-avatar"
+                                                            style="width:32px;height:32px;font-size:0.75rem;background:#198754;">
+                                                            SB</div>
+                                                        <div>
+                                                            <div style="font-weight:600;font-size:0.85rem;">Sara Benali
+                                                            </div>
+                                                            <div style="color:#6c757d;font-size:0.75rem;">M1 Info</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="font-size:0.82rem;font-weight:600;">Data Analyst</div>
+                                                    <div style="font-size:0.75rem;color:#6c757d;">AI Solutions</div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress-custom" style="width:80px;margin-bottom:2px;">
+                                                        <div class="progress-bar-custom" style="width:65%;"></div>
+                                                    </div>
+                                                    <div style="font-size:0.72rem;color:#6c757d;">65%</div>
+                                                </td>
+                                                <td><span class="status-badge status-en-cours">En cours</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <div class="user-avatar"
+                                                            style="width:32px;height:32px;font-size:0.75rem;background:#198754;">
+                                                            KT</div>
+                                                        <div>
+                                                            <div style="font-weight:600;font-size:0.85rem;">Karim Traoré
+                                                            </div>
+                                                            <div style="color:#6c757d;font-size:0.75rem;">L3 Info</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="font-size:0.82rem;font-weight:600;">DevOps</div>
+                                                    <div style="font-size:0.75rem;color:#6c757d;">CloudStack</div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress-custom" style="width:80px;margin-bottom:2px;">
+                                                        <div class="progress-bar-custom" style="width:20%;"></div>
+                                                    </div>
+                                                    <div style="font-size:0.72rem;color:#6c757d;">20%</div>
+                                                </td>
+                                                <td><span class="status-badge status-en-cours">En cours</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actions rapides + graphique -->
+                    <div class="col-lg-5">
+                        <div class="card mb-3">
+                            <div class="card-header"><span class="card-title"><i class="bi bi-lightning-fill me-2"
+                                        style="color:#198754;"></i>Actions rapides</span></div>
+                            <div class="card-body d-grid gap-2">
+                                <a href="candidatures.html" class="btn-role"><i class="bi bi-check2 me-2"></i>Valider
+                                    candidatures <span class="badge bg-danger ms-1">3</span></a>
+                                <a href="evaluations.html" class="btn-outline-role"><i
+                                        class="bi bi-clipboard-check me-2"></i>Remplir mes évaluations</a>
+                                <a href="visites-terrain.html" class="btn-outline-role"><i
+                                        class="bi bi-calendar-event me-2"></i>Planifier une visite</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header"><span class="card-title">Répartition stages</span></div>
+                            <div class="card-body"><canvas id="stagesChart" height="160"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Enseignant</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script>
+        const ctx = document.getElementById('stagesChart');
+        if (ctx) { new Chart(ctx, { type: 'doughnut', data: { labels: ['En cours', 'Terminés', 'En attente'], datasets: [{ data: [6, 1, 1], backgroundColor: ['#198754', '#0d6efd', '#ffc107'], borderWidth: 0 }] }, options: { plugins: { legend: { position: 'bottom' } }, cutout: '70%' } }); }
+    </script>
+</body>
+
+</html>

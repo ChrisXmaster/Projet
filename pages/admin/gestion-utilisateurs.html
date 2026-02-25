@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des utilisateurs | StageConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+</head>
+
+<body class="role-admin">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="app-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="bi bi-shield-fill"></i></div>
+                <div class="brand-text">StageConnect<small>Administration</small></div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-title">Principal</div>
+                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-grid"></i></span>Tableau de bord</a>
+                <div class="sidebar-section-title">Gestion des utilisateurs</div>
+                <a href="gestion-utilisateurs.html" class="sidebar-link active"><span class="link-icon"><i
+                            class="bi bi-people"></i></span>Utilisateurs</a>
+                <a href="gestion-formations.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-mortarboard"></i></span>Formations</a>
+                <a href="gestion-entreprises.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-building"></i></span>Entreprises</a>
+                <div class="sidebar-section-title">Supervision</div>
+                <a href="logs-activite.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-activity"></i></span>Journal d'activité</a>
+                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-graph-up"></i></span>Statistiques globales</a>
+                <div class="sidebar-section-title">Configuration</div>
+                <a href="parametres.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-sliders"></i></span>Paramètres</a>
+                <div class="sidebar-section-title">Mon compte</div>
+                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
+                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                            class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <div class="user-name">Admin Dupuis</div>
+                        <div class="user-role">Super Administrateur</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content" id="mainContent">
+            <header class="app-navbar">
+                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="navbar-search">
+                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+                            class="form-control" placeholder="Rechercher un utilisateur..."></div>
+                </div>
+                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
+                            class="badge-dot"></span></button>
+                    <div class="navbar-divider"></div>
+                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">AD</div>
+                </div>
+            </header>
+            <main class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">Gestion des utilisateurs</h1>
+                        <p class="page-subtitle">342 utilisateurs enregistrés sur la plateforme</p>
+                    </div>
+                    <button class="btn-role"><i class="bi bi-person-plus me-2"></i>Créer un compte</button>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-md-3"><select class="form-select">
+                                    <option>Tous les rôles</option>
+                                    <option>Étudiant</option>
+                                    <option>Enseignant</option>
+                                    <option>Entreprise</option>
+                                    <option>Chef Dépt.</option>
+                                    <option>Coordinateur</option>
+                                    <option>Admin</option>
+                                </select></div>
+                            <div class="col-md-3"><select class="form-select">
+                                    <option>Tous les statuts</option>
+                                    <option>Actif</option>
+                                    <option>Inactif</option>
+                                    <option>Suspendu</option>
+                                </select></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-wrapper">
+                            <table class="app-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nom / Email</th>
+                                        <th>Rôle</th>
+                                        <th>Formation / Dept.</th>
+                                        <th>Inscrit le</th>
+                                        <th>Statut</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Ahmed Diallo</strong><br><small
+                                                class="text-muted">a.diallo@etu.univ.fr</small></td>
+                                        <td><span class="status-badge"
+                                                style="background:rgba(13,110,253,0.1);color:#0d6efd;">Étudiant</span>
+                                        </td>
+                                        <td>M2 Informatique</td>
+                                        <td>Sep. 2024</td>
+                                        <td><span class="status-badge status-valide">Actif</span></td>
+                                        <td class="d-flex gap-1"><button
+                                                class="btn btn-sm btn-outline-secondary">Modifier</button><button
+                                                class="btn btn-sm btn-outline-danger">Suspendre</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dr. Moreau</strong><br><small
+                                                class="text-muted">r.moreau@univ.fr</small></td>
+                                        <td><span class="status-badge"
+                                                style="background:rgba(32,178,170,0.1);color:#20b2aa;">Enseignant</span>
+                                        </td>
+                                        <td>Informatique</td>
+                                        <td>Sep. 2018</td>
+                                        <td><span class="status-badge status-valide">Actif</span></td>
+                                        <td class="d-flex gap-1"><button
+                                                class="btn btn-sm btn-outline-secondary">Modifier</button><button
+                                                class="btn btn-sm btn-outline-danger">Suspendre</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>TechParis SAS</strong><br><small
+                                                class="text-muted">contact@techparis.fr</small></td>
+                                        <td><span class="status-badge"
+                                                style="background:rgba(255,193,7,0.15);color:#856404;">Entreprise</span>
+                                        </td>
+                                        <td>Tech / Dev</td>
+                                        <td>Jan. 2023</td>
+                                        <td><span class="status-badge status-valide">Actif</span></td>
+                                        <td class="d-flex gap-1"><button
+                                                class="btn btn-sm btn-outline-secondary">Modifier</button><button
+                                                class="btn btn-sm btn-outline-danger">Suspendre</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Prof. Lagrange</strong><br><small
+                                                class="text-muted">p.lagrange@univ.fr</small></td>
+                                        <td><span class="status-badge"
+                                                style="background:rgba(111,66,193,0.1);color:#6f42c1;">Chef Dépt.</span>
+                                        </td>
+                                        <td>Informatique</td>
+                                        <td>Jan. 2019</td>
+                                        <td><span class="status-badge status-valide">Actif</span></td>
+                                        <td class="d-flex gap-1"><button
+                                                class="btn btn-sm btn-outline-secondary">Modifier</button><button
+                                                class="btn btn-sm btn-outline-danger">Suspendre</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sophie Chabert</strong><br><small
+                                                class="text-muted">s.chabert@univ.fr</small></td>
+                                        <td><span class="status-badge"
+                                                style="background:rgba(32,178,170,0.1);color:#20b2aa;">Coordinateur</span>
+                                        </td>
+                                        <td>Service des Stages</td>
+                                        <td>Sep. 2021</td>
+                                        <td><span class="status-badge status-valide">Actif</span></td>
+                                        <td class="d-flex gap-1"><button
+                                                class="btn btn-sm btn-outline-secondary">Modifier</button><button
+                                                class="btn btn-sm btn-outline-danger">Suspendre</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Administration</span></footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+
+</html>
