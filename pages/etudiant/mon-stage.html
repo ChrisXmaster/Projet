@@ -12,63 +12,63 @@
 </head>
 
 <body class="role-etudiant">
-    <div class="sidebar-overlay"></div>
-    <div class="app-wrapper">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
-                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+    <div class="superposition-barre"></div>
+    <div class="conteneur-app">
+        <aside class="barre-laterale" id="sidebar">
+            <div class="barre-laterale-marque">
+                <div class="icone-marque"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="texte-marque">StageConnect<small>Espace Étudiant</small></div>
             </div>
-            <nav class="sidebar-nav">
-                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+            <nav class="barre-laterale-nav">
+                <a href="dashboard.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-grid"></i></span>Tableau de bord</a>
-                <a href="offres-stage.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="offres-stage.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-briefcase"></i></span>Offres de stage</a>
-                <a href="mes-candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="mes-candidatures.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-send"></i></span>Mes candidatures</a>
-                <a href="mon-stage.html" class="sidebar-link active"><span class="link-icon"><i
+                <a href="mon-stage.html" class="lien-nav active"><span class="icone-lien"><i
                             class="bi bi-building"></i></span>Mon stage</a>
-                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="journal-stage.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-journal-text"></i></span>Journal de stage</a>
-                <a href="documents.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="documents.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-folder2"></i></span>Documents</a>
-                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="mes-evaluations.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-star"></i></span>Mes évaluations</a>
-                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="notifications.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-bell"></i></span>Notifications</a>
-                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="profil.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-person"></i></span>Mon profil</a>
-                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="../auth/login.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
             </nav>
-            <div class="sidebar-footer">
-                <div class="user-card">
-                    <div class="user-avatar">AD</div>
-                    <div class="user-info">
-                        <div class="user-name">Ahmed Diallo</div>
-                        <div class="user-role">Étudiant M2 Info</div>
+            <div class="pied-barre-laterale">
+                <div class="carte-utilisateur">
+                    <div class="avatar-utilisateur">AD</div>
+                    <div class="info-utilisateur">
+                        <div class="nom-utilisateur">Ahmed Diallo</div>
+                        <div class="role-utilisateur">Étudiant M2 Info</div>
                     </div>
                 </div>
             </div>
         </aside>
-        <div class="main-content" id="mainContent">
-            <header class="app-navbar">
-                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
-                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
-                            class="badge-dot"></span></button></div>
+        <div class="contenu-principal" id="mainContent">
+            <header class="barre-navigation">
+                <button class="bouton-toggle-nav" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="fin-barre-nav ms-auto"><button class="bouton-icone-nav"><i class="bi bi-bell"></i><span
+                            class="point-badge"></span></button></div>
             </header>
-            <main class="page-content">
-                <div class="page-header">
-                    <h1 class="page-title">Mon stage</h1>
-                    <p class="page-subtitle">Développeur Full-Stack · BéninTech SAS</p>
+            <main class="contenu-page">
+                <div class="en-tete-page">
+                    <h1 class="titre-page">Mon stage</h1>
+                    <p class="sous-titre-page">Développeur Full-Stack · BéninTech SAS</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-8">
                         <!-- Informations du stage -->
                         <div class="card mb-4">
                             <div class="card-header"><span class="card-title"><i
-                                        class="bi bi-building me-2 text-role"></i>Informations générales</span><span
-                                    class="status-badge status-en-cours">En cours</span></div>
+                                        class="bi bi-building me-2 texte-role"></i>Informations générales</span><span
+                                    class="badge-statut statut-en-cours">En cours</span></div>
                             <div class="card-body">
                                 <div class="row g-3">
                                     <div class="col-md-6"><label class="form-label"
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="col-md-6"><label class="form-label"
                                             style="font-size:0.78rem;color:#6c757d;font-weight:600;">LOCALISATION</label>
-                                        <p class="fw-700 mb-0"><i class="bi bi-geo-alt text-role"></i> Cotonou (Cotonou)
+                                        <p class="fw-700 mb-0"><i class="bi bi-geo-alt texte-role"></i> Cotonou (Cotonou)
                                         </p>
                                     </div>
                                 </div>
@@ -112,11 +112,11 @@
                         <!-- Progression -->
                         <div class="card">
                             <div class="card-header"><span class="card-title"><i
-                                        class="bi bi-bar-chart-steps me-2 text-role"></i>Progression</span><span
-                                    class="fw-700 text-role">42%</span></div>
+                                        class="bi bi-bar-chart-steps me-2 texte-role"></i>Progression</span><span
+                                    class="fw-700 texte-role">42%</span></div>
                             <div class="card-body">
-                                <div class="progress-custom mb-2">
-                                    <div class="progress-bar-custom" style="width:42%"></div>
+                                <div class="barre-progression mb-2">
+                                    <div class="remplissage-progression" style="width:42%"></div>
                                 </div>
                                 <div class="d-flex justify-content-between" style="font-size:0.78rem;color:#6c757d;">
                                     <span>Semaine 1</span><span>Semaine 9 / 21</span><span>Semaine 21</span></div>
@@ -146,9 +146,9 @@
                             <div class="card-body d-grid gap-2">
                                 <a href="journal-stage.html" class="btn-role"><i class="bi bi-pencil"></i> Journal du
                                     jour</a>
-                                <a href="documents.html" class="btn-outline-role"><i class="bi bi-upload"></i> Déposer
+                                <a href="documents.html" class="btn-contour-role"><i class="bi bi-upload"></i> Déposer
                                     rapport</a>
-                                <a href="mes-evaluations.html" class="btn-outline-role"><i class="bi bi-star"></i> Mes
+                                <a href="mes-evaluations.html" class="btn-contour-role"><i class="bi bi-star"></i> Mes
                                     évaluations</a>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                             <div class="card-body"
                                 style="font-size:0.85rem;display:flex;flex-direction:column;gap:14px;">
                                 <div class="d-flex gap-3 align-items-center">
-                                    <div class="user-avatar" style="background:#198754;">MF</div>
+                                    <div class="avatar-utilisateur" style="background:#198754;">MF</div>
                                     <div>
                                         <div style="font-weight:600;">Marc Fontaine</div>
                                         <div style="color:#6c757d;font-size:0.8rem;">Encadrant pro</div><a
@@ -166,7 +166,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex gap-3 align-items-center">
-                                    <div class="user-avatar" style="background:#0d6efd;">JM</div>
+                                    <div class="avatar-utilisateur" style="background:#0d6efd;">JM</div>
                                     <div>
                                         <div style="font-weight:600;">M. Jean Martin</div>
                                         <div style="color:#6c757d;font-size:0.8rem;">Encadrant académique</div><a
@@ -179,11 +179,10 @@
                     </div>
                 </div>
             </main>
-            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
+            <footer class="pied-page"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/app.js"></script>
 </body>
 
 </html>

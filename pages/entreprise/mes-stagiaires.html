@@ -12,64 +12,64 @@
 </head>
 
 <body class="role-entreprise">
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    <div class="app-wrapper">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-icon"><i class="bi bi-building-fill"></i></div>
-                <div class="brand-text">StageConnect<small>Espace Entreprise</small></div>
+    <div class="superposition-barre" id="sidebarOverlay"></div>
+    <div class="conteneur-app">
+        <aside class="barre-laterale" id="sidebar">
+            <div class="barre-laterale-marque">
+                <div class="icone-marque"><i class="bi bi-building-fill"></i></div>
+                <div class="texte-marque">StageConnect<small>Espace Entreprise</small></div>
             </div>
-            <nav class="sidebar-nav">
-                <div class="sidebar-section-title">Principal</div>
-                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+            <nav class="barre-laterale-nav">
+                <div class="titre-section-nav">Principal</div>
+                <a href="dashboard.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-grid"></i></span>Tableau de bord</a>
-                <a href="nouvelle-offre.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="nouvelle-offre.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-plus-circle"></i></span>Publier une offre</a>
-                <a href="mes-offres.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="mes-offres.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-briefcase"></i></span>Mes offres</a>
-                <div class="sidebar-section-title">Candidatures</div>
-                <a href="candidatures-recues.html" class="sidebar-link"><span class="link-icon"><i
-                            class="bi bi-inbox"></i></span>Candidatures reçues <span class="link-badge">7</span></a>
-                <a href="mes-stagiaires.html" class="sidebar-link active"><span class="link-icon"><i
+                <div class="titre-section-nav">Candidatures</div>
+                <a href="candidatures-recues.html" class="lien-nav"><span class="icone-lien"><i
+                            class="bi bi-inbox"></i></span>Candidatures reçues <span class="badge-lien">7</span></a>
+                <a href="mes-stagiaires.html" class="lien-nav active"><span class="icone-lien"><i
                             class="bi bi-people"></i></span>Mes stagiaires</a>
-                <a href="evaluer-stagiaire.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="evaluer-stagiaire.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-star"></i></span>Évaluer un stagiaire</a>
-                <div class="sidebar-section-title">Mon compte</div>
-                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                <div class="titre-section-nav">Mon compte</div>
+                <a href="notifications.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-bell"></i></span>Notifications</a>
-                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="profil.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-building"></i></span>Profil entreprise</a>
-                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="../auth/login.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
             </nav>
-            <div class="sidebar-footer">
-                <div class="user-card">
-                    <div class="user-avatar">TP</div>
-                    <div class="user-info">
-                        <div class="user-name">BéninTech SAS</div>
-                        <div class="user-role">Entreprise partenaire</div>
+            <div class="pied-barre-laterale">
+                <div class="carte-utilisateur">
+                    <div class="avatar-utilisateur">TP</div>
+                    <div class="info-utilisateur">
+                        <div class="nom-utilisateur">BéninTech SAS</div>
+                        <div class="role-utilisateur">Entreprise partenaire</div>
                     </div>
                 </div>
             </div>
         </aside>
-        <div class="main-content" id="mainContent">
-            <header class="app-navbar">
-                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
-                <div class="navbar-search">
-                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+        <div class="contenu-principal" id="mainContent">
+            <header class="barre-navigation">
+                <button class="bouton-toggle-nav" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="recherche-nav">
+                    <div class="conteneur-recherche"><i class="bi bi-search icone-recherche"></i><input type="search"
                             class="form-control" placeholder="Rechercher un stagiaire..."></div>
                 </div>
-                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
-                            class="badge-dot"></span></button>
-                    <div class="navbar-divider"></div>
-                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
+                <div class="fin-barre-nav"><button class="bouton-icone-nav"><i class="bi bi-bell"></i><span
+                            class="point-badge"></span></button>
+                    <div class="separateur-nav"></div>
+                    <div class="avatar-utilisateur" style="width:34px;height:34px;font-size:0.8rem;">TP</div>
                 </div>
             </header>
-            <main class="page-content">
-                <div class="page-header">
+            <main class="contenu-page">
+                <div class="en-tete-page">
                     <div>
-                        <h1 class="page-title">Mes stagiaires</h1>
-                        <p class="page-subtitle">3 stagiaires en cours de stage</p>
+                        <h1 class="titre-page">Mes stagiaires</h1>
+                        <p class="sous-titre-page">3 stagiaires en cours de stage</p>
                     </div>
                 </div>
 
@@ -78,28 +78,28 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="user-avatar" style="width:52px;height:52px;font-size:1.2rem;">AD</div>
+                                    <div class="avatar-utilisateur" style="width:52px;height:52px;font-size:1.2rem;">AD</div>
                                     <div>
                                         <h6 style="font-weight:700;margin:0;">Ahmed Diallo</h6>
                                         <small class="text-muted">Développeur Full-Stack</small>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column gap-1 mb-3" style="font-size:0.82rem;">
-                                    <div><i class="bi bi-calendar text-role me-2"></i>1 Mars — 31 Juil. 2026</div>
-                                    <div><i class="bi bi-person text-role me-2"></i>Encadrant : Dr. Moreau</div>
-                                    <div><i class="bi bi-geo-alt text-role me-2"></i>Cotonou (Présentiel)</div>
+                                    <div><i class="bi bi-calendar texte-role me-2"></i>1 Mars — 31 Juil. 2026</div>
+                                    <div><i class="bi bi-person texte-role me-2"></i>Encadrant : Dr. Moreau</div>
+                                    <div><i class="bi bi-geo-alt texte-role me-2"></i>Cotonou (Présentiel)</div>
                                 </div>
                                 <div class="mb-2 d-flex justify-content-between"
                                     style="font-size:0.82rem;font-weight:600;">
-                                    <span>Progression</span><span class="text-role">42%</span>
+                                    <span>Progression</span><span class="texte-role">42%</span>
                                 </div>
-                                <div class="progress-custom">
-                                    <div class="progress-bar-custom" style="width:42%"></div>
+                                <div class="barre-progression">
+                                    <div class="remplissage-progression" style="width:42%"></div>
                                 </div>
                                 <div class="mt-3 d-flex gap-2">
                                     <a href="evaluer-stagiaire.html" class="btn btn-sm btn-role flex-grow-1"><i
                                             class="bi bi-star"></i> Évaluer</a>
-                                    <span class="status-badge status-en-cours">En cours</span>
+                                    <span class="badge-statut statut-en-cours">En cours</span>
                                 </div>
                             </div>
                         </div>
@@ -108,28 +108,28 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="user-avatar" style="width:52px;height:52px;font-size:1.2rem;">ML</div>
+                                    <div class="avatar-utilisateur" style="width:52px;height:52px;font-size:1.2rem;">ML</div>
                                     <div>
                                         <h6 style="font-weight:700;margin:0;">Marie Lefèvre</h6>
                                         <small class="text-muted">Data Analyst Junior</small>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column gap-1 mb-3" style="font-size:0.82rem;">
-                                    <div><i class="bi bi-calendar text-role me-2"></i>1 Fév. — 31 Juil. 2026</div>
-                                    <div><i class="bi bi-person text-role me-2"></i>Encadrant : Dr. Bernard</div>
-                                    <div><i class="bi bi-geo-alt text-role me-2"></i>Cotonou (Hybride)</div>
+                                    <div><i class="bi bi-calendar texte-role me-2"></i>1 Fév. — 31 Juil. 2026</div>
+                                    <div><i class="bi bi-person texte-role me-2"></i>Encadrant : Dr. Bernard</div>
+                                    <div><i class="bi bi-geo-alt texte-role me-2"></i>Cotonou (Hybride)</div>
                                 </div>
                                 <div class="mb-2 d-flex justify-content-between"
                                     style="font-size:0.82rem;font-weight:600;">
-                                    <span>Progression</span><span class="text-role">58%</span>
+                                    <span>Progression</span><span class="texte-role">58%</span>
                                 </div>
-                                <div class="progress-custom">
-                                    <div class="progress-bar-custom" style="width:58%"></div>
+                                <div class="barre-progression">
+                                    <div class="remplissage-progression" style="width:58%"></div>
                                 </div>
                                 <div class="mt-3 d-flex gap-2">
                                     <a href="evaluer-stagiaire.html" class="btn btn-sm btn-role flex-grow-1"><i
                                             class="bi bi-star"></i> Évaluer</a>
-                                    <span class="status-badge status-en-cours">En cours</span>
+                                    <span class="badge-statut statut-en-cours">En cours</span>
                                 </div>
                             </div>
                         </div>
@@ -138,39 +138,38 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="user-avatar" style="width:52px;height:52px;font-size:1.2rem;">ND</div>
+                                    <div class="avatar-utilisateur" style="width:52px;height:52px;font-size:1.2rem;">ND</div>
                                     <div>
                                         <h6 style="font-weight:700;margin:0;">Nicolas Dupont</h6>
                                         <small class="text-muted">UX Designer</small>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column gap-1 mb-3" style="font-size:0.82rem;">
-                                    <div><i class="bi bi-calendar text-role me-2"></i>15 Jan. — 15 Juil. 2026</div>
-                                    <div><i class="bi bi-person text-role me-2"></i>Encadrant : Dr. Petit</div>
-                                    <div><i class="bi bi-geo-alt text-role me-2"></i>Cotonou (Télétravail)</div>
+                                    <div><i class="bi bi-calendar texte-role me-2"></i>15 Jan. — 15 Juil. 2026</div>
+                                    <div><i class="bi bi-person texte-role me-2"></i>Encadrant : Dr. Petit</div>
+                                    <div><i class="bi bi-geo-alt texte-role me-2"></i>Cotonou (Télétravail)</div>
                                 </div>
                                 <div class="mb-2 d-flex justify-content-between"
                                     style="font-size:0.82rem;font-weight:600;">
-                                    <span>Progression</span><span class="text-role">73%</span>
+                                    <span>Progression</span><span class="texte-role">73%</span>
                                 </div>
-                                <div class="progress-custom">
-                                    <div class="progress-bar-custom" style="width:73%"></div>
+                                <div class="barre-progression">
+                                    <div class="remplissage-progression" style="width:73%"></div>
                                 </div>
                                 <div class="mt-3 d-flex gap-2">
                                     <a href="evaluer-stagiaire.html" class="btn btn-sm btn-role flex-grow-1"><i
                                             class="bi bi-star"></i> Évaluer</a>
-                                    <span class="status-badge status-en-cours">En cours</span>
+                                    <span class="badge-statut statut-en-cours">En cours</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
-            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Entreprise</span></footer>
+            <footer class="pied-page"><span>StageConnect &copy; 2026</span><span>Espace Entreprise</span></footer>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/app.js"></script>
 </body>
 
 </html>

@@ -12,62 +12,62 @@
 </head>
 
 <body class="role-etudiant">
-    <div class="sidebar-overlay"></div>
-    <div class="app-wrapper">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
-                <div class="brand-text">StageConnect<small>Espace Étudiant</small></div>
+    <div class="superposition-barre"></div>
+    <div class="conteneur-app">
+        <aside class="barre-laterale" id="sidebar">
+            <div class="barre-laterale-marque">
+                <div class="icone-marque"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="texte-marque">StageConnect<small>Espace Étudiant</small></div>
             </div>
-            <nav class="sidebar-nav">
-                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+            <nav class="barre-laterale-nav">
+                <a href="dashboard.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-grid"></i></span>Tableau de bord</a>
-                <a href="offres-stage.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="offres-stage.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-briefcase"></i></span>Offres de stage</a>
-                <a href="mes-candidatures.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="mes-candidatures.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-send"></i></span>Mes candidatures</a>
-                <a href="mon-stage.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="mon-stage.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-building"></i></span>Mon stage</a>
-                <a href="journal-stage.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="journal-stage.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-journal-text"></i></span>Journal de stage</a>
-                <a href="documents.html" class="sidebar-link active"><span class="link-icon"><i
+                <a href="documents.html" class="lien-nav active"><span class="icone-lien"><i
                             class="bi bi-folder2"></i></span>Documents</a>
-                <a href="mes-evaluations.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="mes-evaluations.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-star"></i></span>Mes évaluations</a>
-                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="notifications.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-bell"></i></span>Notifications</a>
-                <a href="profil.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="profil.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-person"></i></span>Mon profil</a>
-                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="../auth/login.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
             </nav>
-            <div class="sidebar-footer">
-                <div class="user-card">
-                    <div class="user-avatar">AD</div>
-                    <div class="user-info">
-                        <div class="user-name">Ahmed Diallo</div>
-                        <div class="user-role">Étudiant M2 Info</div>
+            <div class="pied-barre-laterale">
+                <div class="carte-utilisateur">
+                    <div class="avatar-utilisateur">AD</div>
+                    <div class="info-utilisateur">
+                        <div class="nom-utilisateur">Ahmed Diallo</div>
+                        <div class="role-utilisateur">Étudiant M2 Info</div>
                     </div>
                 </div>
             </div>
         </aside>
-        <div class="main-content" id="mainContent">
-            <header class="app-navbar">
-                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
-                <div class="navbar-end ms-auto"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
-                            class="badge-dot"></span></button></div>
+        <div class="contenu-principal" id="mainContent">
+            <header class="barre-navigation">
+                <button class="bouton-toggle-nav" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="fin-barre-nav ms-auto"><button class="bouton-icone-nav"><i class="bi bi-bell"></i><span
+                            class="point-badge"></span></button></div>
             </header>
-            <main class="page-content">
-                <div class="page-header">
-                    <h1 class="page-title">Mes documents</h1>
-                    <p class="page-subtitle">Gérez et déposez vos documents de stage</p>
+            <main class="contenu-page">
+                <div class="en-tete-page">
+                    <h1 class="titre-page">Mes documents</h1>
+                    <p class="sous-titre-page">Gérez et déposez vos documents de stage</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-5">
                         <!-- Zone d'upload -->
                         <div class="card">
                             <div class="card-header"><span class="card-title"><i
-                                        class="bi bi-cloud-upload me-2 text-role"></i>Déposer un document</span></div>
+                                        class="bi bi-cloud-upload me-2 texte-role"></i>Déposer un document</span></div>
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label class="form-label fw-600" style="font-size:0.82rem;">Type de document <span
@@ -81,8 +81,8 @@
                                         <option>Autre</option>
                                     </select>
                                 </div>
-                                <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
-                                    <div class="upload-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+                                <div class="zone-telechargement" onclick="document.getElementById('fileInput').click()">
+                                    <div class="icone-telechargement"><i class="bi bi-cloud-arrow-up"></i></div>
                                     <p style="font-weight:600;margin-bottom:4px;">Glissez votre fichier ici</p>
                                     <p style="font-size:0.8rem;color:#6c757d;">ou cliquez pour sélectionner (PDF, DOCX,
                                         max 10 Mo)</p>
@@ -96,7 +96,7 @@
                     <div class="col-lg-7">
                         <div class="card">
                             <div class="card-header"><span class="card-title"><i
-                                        class="bi bi-folder2-open me-2 text-role"></i>Mes documents</span><small
+                                        class="bi bi-folder2-open me-2 texte-role"></i>Mes documents</span><small
                                     style="color:#6c757d;font-size:0.78rem;">4 fichiers</small></div>
                             <div class="card-body p-0">
                                 <!-- Doc 1 -->
@@ -109,7 +109,7 @@
                                         <div style="font-size:0.78rem;color:#6c757d;">Convention · 2.1 Mo · 01/03/2026
                                         </div>
                                     </div>
-                                    <span class="status-badge status-valide">Validé</span>
+                                    <span class="badge-statut statut-valide">Validé</span>
                                     <button class="btn btn-sm btn-outline-secondary" title="Télécharger"><i
                                             class="bi bi-download"></i></button>
                                 </div>
@@ -124,7 +124,7 @@
                                         <div style="font-size:0.78rem;color:#6c757d;">Rapport · 1.4 Mo · 14/02/2026
                                         </div>
                                     </div>
-                                    <span class="status-badge status-en-attente">En cours de révision</span>
+                                    <span class="badge-statut statut-en-attente">En cours de révision</span>
                                     <button class="btn btn-sm btn-outline-secondary"><i
                                             class="bi bi-download"></i></button>
                                 </div>
@@ -137,7 +137,7 @@
                                         <div style="font-weight:600;font-size:0.875rem;">cv_ahmed_diallo_2026.pdf</div>
                                         <div style="font-size:0.78rem;color:#6c757d;">CV · 0.8 Mo · 20/01/2026</div>
                                     </div>
-                                    <span class="status-badge status-valide">Validé</span>
+                                    <span class="badge-statut statut-valide">Validé</span>
                                     <button class="btn btn-sm btn-outline-secondary"><i
                                             class="bi bi-download"></i></button>
                                 </div>
@@ -152,7 +152,7 @@
                                         <div style="font-size:0.78rem;color:#6c757d;">Présence · 0.3 Mo · 28/02/2026
                                         </div>
                                     </div>
-                                    <span class="status-badge status-valide">Validé</span>
+                                    <span class="badge-statut statut-valide">Validé</span>
                                     <button class="btn btn-sm btn-outline-secondary"><i
                                             class="bi bi-download"></i></button>
                                 </div>
@@ -161,11 +161,10 @@
                     </div>
                 </div>
             </main>
-            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
+            <footer class="pied-page"><span>StageConnect &copy; 2026</span><span>Espace Étudiant</span></footer>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/app.js"></script>
 </body>
 
 </html>

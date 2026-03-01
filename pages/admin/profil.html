@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -12,88 +12,88 @@
 </head>
 
 <body class="role-admin">
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    <div class="app-wrapper">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-icon"><i class="bi bi-shield-fill"></i></div>
-                <div class="brand-text">StageConnect<small>Administration</small></div>
+    <div class="superposition-barre" id="sidebarOverlay"></div>
+    <div class="conteneur-app">
+        <aside class="barre-laterale" id="sidebar">
+            <div class="barre-laterale-marque">
+                <div class="icone-marque"><i class="bi bi-shield-fill"></i></div>
+                <div class="texte-marque">StageConnect<small>Administration</small></div>
             </div>
-            <nav class="sidebar-nav">
-                <div class="sidebar-section-title">Principal</div>
-                <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i
+            <nav class="barre-laterale-nav">
+                <div class="titre-section-nav">Principal</div>
+                <a href="dashboard.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-grid"></i></span>Tableau de bord</a>
-                <div class="sidebar-section-title">Gestion des utilisateurs</div>
-                <a href="gestion-utilisateurs.html" class="sidebar-link"><span class="link-icon"><i
+                <div class="titre-section-nav">Gestion des utilisateurs</div>
+                <a href="gestion-utilisateurs.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-people"></i></span>Utilisateurs</a>
-                <a href="gestion-formations.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="gestion-formations.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-mortarboard"></i></span>Formations</a>
-                <a href="gestion-entreprises.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="gestion-entreprises.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-building"></i></span>Entreprises</a>
-                <div class="sidebar-section-title">Supervision</div>
-                <a href="logs-activite.html" class="sidebar-link"><span class="link-icon"><i
+                <div class="titre-section-nav">Supervision</div>
+                <a href="logs-activite.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-activity"></i></span>Journal d'activité</a>
-                <a href="statistiques.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="statistiques.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-graph-up"></i></span>Statistiques globales</a>
-                <div class="sidebar-section-title">Configuration</div>
-                <a href="parametres.html" class="sidebar-link"><span class="link-icon"><i
+                <div class="titre-section-nav">Configuration</div>
+                <a href="parametres.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-sliders"></i></span>Paramètres</a>
-                <div class="sidebar-section-title">Mon compte</div>
-                <a href="notifications.html" class="sidebar-link"><span class="link-icon"><i
-                            class="bi bi-bell"></i></span>Notifications <span class="link-badge">3</span></a>
-                <a href="profil.html" class="sidebar-link active"><span class="link-icon"><i
+                <div class="titre-section-nav">Mon compte</div>
+                <a href="notifications.html" class="lien-nav"><span class="icone-lien"><i
+                            class="bi bi-bell"></i></span>Notifications <span class="badge-lien">3</span></a>
+                <a href="profil.html" class="lien-nav active"><span class="icone-lien"><i
                             class="bi bi-person"></i></span>Mon profil</a>
-                <a href="../auth/login.html" class="sidebar-link"><span class="link-icon"><i
+                <a href="../auth/login.html" class="lien-nav"><span class="icone-lien"><i
                             class="bi bi-box-arrow-right"></i></span>Déconnexion</a>
             </nav>
-            <div class="sidebar-footer">
-                <div class="user-card">
-                    <div class="user-avatar">AD</div>
-                    <div class="user-info">
-                        <div class="user-name">Admin Dupuis</div>
-                        <div class="user-role">Super Administrateur</div>
+            <div class="pied-barre-laterale">
+                <div class="carte-utilisateur">
+                    <div class="avatar-utilisateur">AD</div>
+                    <div class="info-utilisateur">
+                        <div class="nom-utilisateur">Admin Dupuis</div>
+                        <div class="role-utilisateur">Super Administrateur</div>
                     </div>
                 </div>
             </div>
         </aside>
-        <div class="main-content" id="mainContent">
-            <header class="app-navbar">
-                <button class="navbar-toggle-btn" id="sidebarToggle"><i class="bi bi-list"></i></button>
-                <div class="navbar-search">
-                    <div class="navbar-search-wrapper"><i class="bi bi-search search-icon"></i><input type="search"
+        <div class="contenu-principal" id="mainContent">
+            <header class="barre-navigation">
+                <button class="bouton-toggle-nav" id="sidebarToggle"><i class="bi bi-list"></i></button>
+                <div class="recherche-nav">
+                    <div class="conteneur-recherche"><i class="bi bi-search icone-recherche"></i><input type="search"
                             class="form-control" placeholder="Rechercher..."></div>
                 </div>
-                <div class="navbar-end"><button class="nav-icon-btn"><i class="bi bi-bell"></i><span
-                            class="badge-dot"></span></button>
-                    <div class="navbar-divider"></div>
-                    <div class="user-avatar" style="width:34px;height:34px;font-size:0.8rem;">AD</div>
+                <div class="fin-barre-nav"><button class="bouton-icone-nav"><i class="bi bi-bell"></i><span
+                            class="point-badge"></span></button>
+                    <div class="separateur-nav"></div>
+                    <div class="avatar-utilisateur" style="width:34px;height:34px;font-size:0.8rem;">AD</div>
                 </div>
             </header>
-            <main class="page-content">
-                <div class="page-header">
-                    <h1 class="page-title">Mon profil</h1>
-                    <p class="page-subtitle">Gestion de votre compte administrateur</p>
+            <main class="contenu-page">
+                <div class="en-tete-page">
+                    <h1 class="titre-page">Mon profil</h1>
+                    <p class="sous-titre-page">Gestion de votre compte administrateur</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4">
                         <div class="card text-center p-4">
-                            <div class="user-avatar mx-auto mb-3" style="width:72px;height:72px;font-size:1.8rem;">AD
+                            <div class="avatar-utilisateur mx-auto mb-3" style="width:72px;height:72px;font-size:1.8rem;">AD
                             </div>
                             <h5 style="font-weight:700;">Admin Dupuis</h5>
                             <p style="font-size:0.85rem;color:#6c757d;">Super Administrateur</p>
-                            <span class="status-badge status-valide">Compte système actif</span>
+                            <span class="badge-statut statut-valide">Compte système actif</span>
                             <hr>
                             <div class="d-flex flex-column gap-2 text-start" style="font-size:0.85rem;">
-                                <div><i class="bi bi-envelope text-role me-2"></i>admin@uac.bj</div>
-                                <div><i class="bi bi-telephone text-role me-2"></i>+229 21 36 00 00</div>
-                                <div><i class="bi bi-geo-alt text-role me-2"></i>Rectorat, UAC Cotonou</div>
+                                <div><i class="bi bi-envelope texte-role me-2"></i>admin@uac.bj</div>
+                                <div><i class="bi bi-telephone texte-role me-2"></i>+229 21 36 00 00</div>
+                                <div><i class="bi bi-geo-alt texte-role me-2"></i>Rectorat, UAC Cotonou</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header"><span class="card-title"><i
-                                        class="bi bi-pencil me-2 text-role"></i>Informations personnelles</span></div>
+                                        class="bi bi-pencil me-2 texte-role"></i>Informations personnelles</span></div>
                             <div class="card-body">
                                 <form>
                                     <div class="row g-3">
@@ -134,11 +134,10 @@
                     </div>
                 </div>
             </main>
-            <footer class="app-footer"><span>StageConnect &copy; 2026</span><span>Administration</span></footer>
+            <footer class="pied-page"><span>StageConnect &copy; 2026</span><span>Administration</span></footer>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/app.js"></script>
 </body>
 
 </html>

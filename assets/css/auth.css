@@ -1,23 +1,30 @@
 /* =============================================================
-   AUTH PAGES — STYLES
+   PAGES D'AUTHENTIFICATION — STYLES
    ============================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+/* ── Variables CSS ─────────────────────────────────────────── */
 :root {
-  --primary: #0d6efd;
-  --primary-dark: #0b5ed7;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.14);
-  --border-color: #e9ecef;
-  --text-secondary: #6c757d;
+  --primaire: #0d6efd;
+  --primaire-sombre: #0b5ed7;
+  --rayon-petit: 8px;
+  --rayon-moyen: 12px;
+  --rayon-grand: 16px;
+  --rayon-extra: 24px;
+  --ombre-moyenne: 0 4px 20px rgba(0, 0, 0, 0.10);
+  --ombre-grande: 0 8px 40px rgba(0, 0, 0, 0.14);
+  --couleur-bordure: #e9ecef;
+  --texte-secondaire: #6c757d;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -27,15 +34,15 @@ body {
   font-size: 0.9rem;
 }
 
-/* ── Auth Layout ─────────────────────────────────────────── */
-.auth-wrapper {
+/* ── Disposition de l'authentification ──────────────────────── */
+.conteneur-auth {
   display: flex;
   min-height: 100vh;
   width: 100%;
 }
 
-/* Left Panel */
-.auth-panel-left {
+/* ── Panneau gauche (illustration) ──────────────────────────── */
+.panneau-gauche {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -47,96 +54,110 @@ body {
   color: white;
 }
 
-.auth-panel-left .panel-bg {
+.panneau-gauche .fond-panneau {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
   z-index: 0;
 }
 
-.auth-panel-left .panel-bg::before {
+/* Décoration cercle supérieur droit */
+.panneau-gauche .fond-panneau::before {
   content: '';
   position: absolute;
-  width: 400px; height: 400px;
-  background: rgba(255,255,255,0.07);
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 50%;
-  top: -100px; right: -100px;
+  top: -100px;
+  right: -100px;
 }
 
-.auth-panel-left .panel-bg::after {
+/* Décoration cercle inférieur gauche */
+.panneau-gauche .fond-panneau::after {
   content: '';
   position: absolute;
-  width: 300px; height: 300px;
-  background: rgba(255,255,255,0.05);
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
-  bottom: -80px; left: -60px;
+  bottom: -80px;
+  left: -60px;
 }
 
-.auth-panel-left .panel-content {
+.panneau-gauche .contenu-panneau {
   position: relative;
   z-index: 1;
   max-width: 380px;
   text-align: center;
 }
 
-.auth-panel-left .panel-logo {
-  width: 72px; height: 72px;
-  background: rgba(255,255,255,0.15);
+.panneau-gauche .logo-panneau {
+  width: 72px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   margin: 0 auto 28px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.auth-panel-left h1 {
+.panneau-gauche h1 {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 14px;
   line-height: 1.2;
 }
 
-.auth-panel-left p {
+.panneau-gauche p {
   font-size: 1rem;
   opacity: 0.85;
   line-height: 1.7;
 }
 
-/* Steps list */
-.auth-steps {
+/* ── Liste des étapes de connexion ──────────────────────────── */
+.etapes-auth {
   list-style: none;
   margin-top: 36px;
   text-align: left;
 }
 
-.auth-steps li {
+.etapes-auth li {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.auth-steps li:last-child { border-bottom: none; }
+.etapes-auth li:last-child {
+  border-bottom: none;
+}
 
-.auth-steps .step-num {
-  width: 28px; height: 28px;
-  background: rgba(255,255,255,0.2);
+.etapes-auth .numero-etape {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
-.auth-steps .step-text {
+.etapes-auth .texte-etape {
   font-size: 0.875rem;
   opacity: 0.9;
 }
 
-/* ── Right Panel (Form) ─────────────────────────────────── */
-.auth-panel-right {
+/* ── Panneau droit (formulaire) ─────────────────────────────── */
+.panneau-droit {
   width: 480px;
   display: flex;
   flex-direction: column;
@@ -147,31 +168,31 @@ body {
   position: relative;
 }
 
-.auth-form-wrapper {
+.conteneur-formulaire {
   width: 100%;
   max-width: 360px;
 }
 
-.auth-form-title {
+.titre-formulaire {
   font-size: 1.6rem;
   font-weight: 800;
   color: #1e2128;
   margin-bottom: 6px;
 }
 
-.auth-form-subtitle {
-  color: var(--text-secondary);
+.sous-titre-formulaire {
+  color: var(--texte-secondaire);
   font-size: 0.875rem;
   margin-bottom: 32px;
 }
 
-/* ── Form Controls ─────────────────────────────────────── */
-.form-floating-custom {
+/* ── Champs de saisie personnalisés ─────────────────────────── */
+.champ-flottant {
   position: relative;
   margin-bottom: 16px;
 }
 
-.form-floating-custom label {
+.champ-flottant label {
   font-size: 0.8rem;
   font-weight: 600;
   color: #495057;
@@ -179,11 +200,11 @@ body {
   display: block;
 }
 
-.form-control-auth {
+.champ-saisie {
   width: 100%;
   padding: 11px 14px 11px 42px;
-  border: 1.5px solid var(--border-color);
-  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--couleur-bordure);
+  border-radius: var(--rayon-petit);
   font-size: 0.9rem;
   font-family: 'Inter', sans-serif;
   color: #1e2128;
@@ -191,54 +212,61 @@ body {
   background: #f8f9fa;
 }
 
-.form-control-auth:focus {
+.champ-saisie:focus {
   outline: none;
-  border-color: var(--primary);
+  border-color: var(--primaire);
   background: white;
-  box-shadow: 0 0 0 3px rgba(13,110,253,0.1);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
 }
 
-.form-control-auth.is-invalid {
+/* Champ invalide */
+.champ-saisie.invalide {
   border-color: #dc3545;
   background: white;
 }
 
-.input-icon-wrapper { position: relative; }
+.conteneur-icone-saisie {
+  position: relative;
+}
 
-.input-icon {
+.icone-saisie {
   position: absolute;
-  left: 13px; top: 50%;
+  left: 13px;
+  top: 50%;
   transform: translateY(-50%);
-  color: var(--text-secondary);
+  color: var(--texte-secondaire);
   font-size: 1rem;
   pointer-events: none;
 }
 
-.input-toggle-password {
+.toggle-mot-de-passe {
   position: absolute;
-  right: 12px; top: 50%;
+  right: 12px;
+  top: 50%;
   transform: translateY(-50%);
-  background: none; border: none;
-  color: var(--text-secondary);
+  background: none;
+  border: none;
+  color: var(--texte-secondaire);
   cursor: pointer;
   font-size: 1rem;
   padding: 0;
 }
 
-.invalid-feedback {
+/* Message d'erreur de validation */
+.message-erreur {
   font-size: 0.78rem;
   color: #dc3545;
   margin-top: 4px;
 }
 
-/* ── Auth Button ─────────────────────────────────────────── */
-.btn-auth {
+/* ── Bouton de connexion ─────────────────────────────────────── */
+.bouton-connexion {
   width: 100%;
   padding: 12px;
-  background: var(--primary);
+  background: var(--primaire);
   color: white;
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: var(--rayon-petit);
   font-size: 0.95rem;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
@@ -252,23 +280,23 @@ body {
   letter-spacing: 0.02em;
 }
 
-.btn-auth:hover {
-  background: var(--primary-dark);
+.bouton-connexion:hover {
+  background: var(--primaire-sombre);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(13,110,253,0.3);
+  box-shadow: 0 4px 16px rgba(13, 110, 253, 0.3);
 }
 
-/* ── Role Cards ─────────────────────────────────────────── */
-.role-grid {
+/* ── Grille de sélection de rôle ────────────────────────────── */
+.grille-roles {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 20px;
 }
 
-.role-card {
-  border: 2px solid var(--border-color);
-  border-radius: var(--radius-sm);
+.carte-role {
+  border: 2px solid var(--couleur-bordure);
+  border-radius: var(--rayon-petit);
   padding: 14px;
   cursor: pointer;
   transition: all 0.2s;
@@ -276,64 +304,68 @@ body {
   background: white;
 }
 
-.role-card:hover {
-  border-color: var(--primary);
-  background: rgba(13,110,253,0.04);
+.carte-role:hover {
+  border-color: var(--primaire);
+  background: rgba(13, 110, 253, 0.04);
 }
 
-.role-card.selected {
-  border-color: var(--primary);
-  background: rgba(13,110,253,0.06);
+/* Carte de rôle sélectionnée */
+.carte-role.selectionnee {
+  border-color: var(--primaire);
+  background: rgba(13, 110, 253, 0.06);
 }
 
-.role-card .role-icon {
+.carte-role .icone-role {
   font-size: 1.6rem;
   margin-bottom: 6px;
 }
 
-.role-card .role-name {
+.carte-role .nom-role {
   font-size: 0.8rem;
   font-weight: 600;
   color: #1e2128;
 }
 
-/* ── Divider ─────────────────────────────────────────────── */
-.auth-divider {
+/* ── Séparateur ─────────────────────────────────────────────── */
+.separateur-auth {
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 20px 0;
-  color: var(--text-secondary);
+  color: var(--texte-secondaire);
   font-size: 0.8rem;
 }
 
-.auth-divider::before, .auth-divider::after {
+.separateur-auth::before,
+.separateur-auth::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--border-color);
+  background: var(--couleur-bordure);
 }
 
-/* ── Links ─────────────────────────────────────────────── */
-.auth-link {
-  color: var(--primary);
+/* ── Liens ──────────────────────────────────────────────────── */
+.lien-auth {
+  color: var(--primaire);
   font-weight: 600;
   transition: opacity 0.2s;
 }
 
-.auth-link:hover { opacity: 0.8; }
+.lien-auth:hover {
+  opacity: 0.8;
+}
 
-.auth-footer-text {
+.pied-formulaire {
   text-align: center;
   margin-top: 24px;
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--texte-secondaire);
 }
 
-/* ── Alert ─────────────────────────────────────────────── */
-.auth-alert {
+/* ── Alertes ────────────────────────────────────────────────── */
+.alerte-auth {
   padding: 12px 16px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--rayon-petit);
   font-size: 0.85rem;
   margin-bottom: 16px;
   display: flex;
@@ -341,12 +373,34 @@ body {
   gap: 8px;
 }
 
-.auth-alert-danger { background: rgba(220,53,69,0.1); color: #b02a37; border: 1px solid rgba(220,53,69,0.2); }
-.auth-alert-success { background: rgba(25,135,84,0.1); color: #146c43; border: 1px solid rgba(25,135,84,0.2); }
-.auth-alert-info { background: rgba(13,110,253,0.1); color: #0b5ed7; border: 1px solid rgba(13,110,253,0.2); }
+.alerte-erreur {
+  background: rgba(220, 53, 69, 0.1);
+  color: #b02a37;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
 
-/* ── Responsive ─────────────────────────────────────────── */
+.alerte-succes {
+  background: rgba(25, 135, 84, 0.1);
+  color: #146c43;
+  border: 1px solid rgba(25, 135, 84, 0.2);
+}
+
+.alerte-info {
+  background: rgba(13, 110, 253, 0.1);
+  color: #0b5ed7;
+  border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .auth-panel-left { display: none; }
-  .auth-panel-right { width: 100%; padding: 40px 28px; }
+
+  /* Masquer le panneau gauche sur mobile */
+  .panneau-gauche {
+    display: none;
+  }
+
+  .panneau-droit {
+    width: 100%;
+    padding: 40px 28px;
+  }
 }
